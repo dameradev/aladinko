@@ -8,6 +8,8 @@ import { withRouter } from "next/router";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Meta from "../Meta";
 
+import { useFetchUser, UserProvider } from "../../utils/user";
+
 // const MuiTheme = createMuiTheme({
 //   typography: {
 //     htmlFontSize: 10,
@@ -21,12 +23,12 @@ const theme = {
   grey: "#3A3A3A",
   blue: "#2F5DA8",
   lightgrey1: "#E1E1E1",
-  darkgrey1: "#293F5B",
+  darkgrey1: "#383838",
 
-  colorPrimary: "#5EBED6",
+  colorPrimary: "#2090c0",
   offWhite: "#EDEDED",
   maxWidth: "80%",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  bs: "0 12px 10px 0 rgba(0, 0, 0, 0.09)",
   containerMaxHeight: "calc(100vh - 84px)",
 };
 
@@ -89,6 +91,7 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
 // `;
@@ -96,18 +99,25 @@ const GlobalStyle = createGlobalStyle`
 // // injectGlobal`
 //   `;
 
-class Page extends Component {
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-        <StyledPage router={this.props.router}>
+const Page = (props) => {
+  const { user, loading } = useFetchUser();
+  return (
+    <ThemeProvider theme={theme}>
+      <UserProvider value={{ user, loading }}>
+        <StyledPage router={props.router}>
           <Meta />
           <GlobalStyle />
           <Header />
-          {this.props.children}
+          {props.children}
         </StyledPage>
-      </ThemeProvider>
-    );
-  }
-}
+      </UserProvider>
+    </ThemeProvider>
+  );
+};
+
+// class Page extends Component {
+// render() {
+//   // const { user, loading } = userFetchUser();
+
+// }
 export default withRouter(Page);

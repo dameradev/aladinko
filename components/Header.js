@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useState, useEffect } from "react";
 
 import Link from "next/Link";
 import {
@@ -12,6 +12,8 @@ import {
 
 import styled from "styled-components";
 import icons from "../utils/icons";
+
+import Nav from "./Nav";
 
 const HeaderStyled = styled.header`
   /* padding: 1rem 0; */
@@ -27,10 +29,15 @@ const HeaderStyled = styled.header`
     height: 3rem;
 
     display: flex;
+    /* transform: ${(props) =>
+      !props.windowScroll ? "translateY(0)" : "translateY(-3rem)"};   */
     justify-content: space-between;
 
     background: ${(props) => props.theme.colorPrimary};
+    
     color: #fff;
+    animation: all .2s;
+
 
     &__location {
       span {
@@ -44,20 +51,46 @@ const HeaderStyled = styled.header`
     }
   }
 
+
+
   .header-section {
-    max-width: ${(props) => props.theme.maxWidth};
+    /* max-width: ${(props) => props.theme.maxWidth}; */
+    background: rgba(245,245,245,1);
+    /* color: white; */
+    font-weight:600;
+    font-size: 2rem;
+    padding: 0 10%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 10rem;
+    position: fixed;
+    width: 100%;
+    transform: ${(props) =>
+      !props.windowScroll ? "translateY(0)" : "translateY(-3rem)"};  
+    z-index:100;
+
+    box-shadow: ${(props) => props.theme.bs};
+    /* box-shadow:  inset 3px -40px 14px -31px rgba(58,58,58,1); */
+    /* border-bottom: 2px solid ${(props) => props.theme.colorPrimary}; */
+
     .logo {
+      
       grid-column: center-start / col-end 2;
       text-transform: uppercase;
       font-weight: 400;
+      z-index:200;
+      display: flex;
+      align-items: center;
+      svg {
+        width: 10rem;
+        height: 8rem;
+      }
     }
     .nav {
       grid-column: col-start 7 / center-end;
+      z-index:200;
       ul {
         display: flex;
         li {
@@ -73,8 +106,23 @@ const HeaderStyled = styled.header`
 `;
 
 const Header = () => {
+  const [windowScroll, setWindowScroll] = useState(false);
+
+  // componentDidMount() {
+
+  // }
+
+  const listenScrollEvent = () => {
+    window.pageYOffset > 0 ? setWindowScroll(true) : setWindowScroll(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => listenScrollEvent());
+    // return () => window.removeEventListener("scroll", listenScrollEvent());
+  }, []);
+  console.log(windowScroll);
   return (
-    <HeaderStyled>
+    <HeaderStyled windowScroll={windowScroll}>
       <div className="contact-section">
         <p className="contact-section__location">
           <span>{icons.Location}</span>Kamniška 28, 2000 Maribor
@@ -82,32 +130,8 @@ const Header = () => {
         <p>069 652 555</p>
       </div>
       <div className="header-section">
-        <h1 className="logo">Čarobni stroj</h1>
-        <nav className="nav">
-          <ul>
-            <li>
-              <Link href="/">
-                <a>Domov</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Storitve</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a>Cenik</a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/">
-                <a>Kontakt</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <h1 className="logo">{icons.Logo}</h1>
+        <Nav />
       </div>
     </HeaderStyled>
   );
