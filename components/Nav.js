@@ -1,11 +1,8 @@
 import React from "react";
 
 import Link from "next/Link";
-import { useFetchUser } from "../utils/user";
 
 const Nav = () => {
-  const { user, loading } = useFetchUser();
-  console.log(user);
   return (
     <nav className="nav">
       <ul>

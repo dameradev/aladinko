@@ -12,8 +12,6 @@ import { withRouter } from "next/router";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Meta from "../Meta";
 
-import { useFetchUser, UserProvider } from "../../utils/user";
-
 // const MuiTheme = createMuiTheme({
 //   typography: {
 //     htmlFontSize: 10,
@@ -114,7 +112,6 @@ const GlobalStyle = createGlobalStyle`
 //   `;
 
 const Page = (props) => {
-  const { user, loading } = useFetchUser();
   return (
     <ThemeProvider theme={theme}>
       <StyledPage router={props.router}>
