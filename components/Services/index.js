@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { respondTo } from "../../utils/respondTo";
 const ServicesStyled = styled.div`
   grid-column: full-start / full-end;
   h1 {
@@ -12,9 +12,19 @@ const ServicesStyled = styled.div`
 
   .left-hero {
     padding: 10rem 15rem;
+
     background: #fafafa;
     width: 50%;
-    height: calc(100vh -15rem);
+    /* height: calc(100vh -15rem); */
+    ${respondTo.laptop`
+         padding: 3rem 10rem;
+         
+     `}
+
+    ${respondTo.tablet`
+         padding: 3rem 5rem;
+         
+     `}
     h2 {
       padding-bottom: 2rem;
       font-size: 3rem;
@@ -22,6 +32,9 @@ const ServicesStyled = styled.div`
     }
     p {
       font-size: 1.8rem;
+      ${respondTo.tablet`
+      font-size: 1.6rem;
+      `}
     }
     ul {
       list-style: square;
@@ -30,7 +43,7 @@ const ServicesStyled = styled.div`
 
   .right-hero {
     width: 50%;
-    height: calc(100vh -15rem);
+    /* height: calc(100vh -15rem); */
     position: relative;
     &__image-container {
       position: absolute;
@@ -42,11 +55,44 @@ const ServicesStyled = styled.div`
         width: 100%;
         height: 100%;
       }
+
+      ${respondTo.desktopSmall` 
+        width: 70rem;
+        height: 45rem;
+    `}
+
+      ${respondTo.laptop` 
+        width: 60rem;
+        height: 35rem;
+    `}
+
+${respondTo.laptopSmall` 
+        width: 55rem;
+        height: 30rem;
+    `}
+      ${respondTo.tablet`
+         width: 45rem;
+        height: 25rem;
+        left: -2rem
+     `}
+     ${respondTo.tabletMini`
+         width: 40rem;
+        height: 20rem;
+        left: -2rem
+     `}
+     ${respondTo.mobile`
+         width: 33rem;
+        height: 20rem;
+        left: -2rem
+     `}
     }
 
     &__list {
-      margin-top: calc(100vh - 30rem);
+      margin-top: 80%;
       padding: 0 10rem;
+      ${respondTo.tablet`
+       padding: 0 5rem;
+     `}
 
       h3 {
         font-size: 2.5rem;
@@ -67,7 +113,14 @@ const ServicesStyled = styled.div`
   }
 
   .price-list {
-    padding: 0 20%;
+    padding: 0 15%;
+
+    ${respondTo.laptop` 
+        padding: 0 10%;
+    `}
+    ${respondTo.tablet`
+        padding: 0 5%;
+    `}
 
     &__title {
       padding: 2rem 0;
@@ -78,6 +131,9 @@ const ServicesStyled = styled.div`
 
     &__offers {
       display: flex;
+      ${respondTo.tabletMini`
+      flex-direction: column;
+    `}
     }
     &__offer {
       width: 33%;
@@ -86,6 +142,11 @@ const ServicesStyled = styled.div`
       border: 1px solid #ccc;
       transition: all 0.3s;
 
+      ${respondTo.tabletMini`
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    `}
       &:not(:last-of-type) {
         margin-right: 1rem;
       }
@@ -145,7 +206,12 @@ const ServicesStyled = styled.div`
 
     &__container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(15rem, 1fr));
+
+      ${respondTo.laptop` 
+         grid-template-columns: 35rem  minmax(15rem, 1fr);
+         grid-gap: 5rem;
+    `}
     }
     &__item {
       display: flex;
@@ -155,11 +221,47 @@ const ServicesStyled = styled.div`
         color: ${(props) => props.theme.colorPrimary};
         text-transform: uppercase;
       }
-      /* width: 50%; */
       &-number {
-        font-size: 15rem;
+        font-size: 20rem;
         margin-right: 2rem;
+        color: ${(props) => props.theme.colorPrimary};
       }
+
+      &:nth-child(1) {
+        grid-column: 2 / 3;
+        ${respondTo.tablet`
+        grid-column: 1 / 3;
+     `}
+      }
+      &:nth-child(2) {
+        grid-column: 2 / 1;
+        flex-direction: row-reverse;
+        .cleaning-process__item-number {
+          /* font-size: 15rem; */
+          margin-right: 0;
+          margin-left: 2rem;
+        }
+
+        ${respondTo.laptop`
+            grid-column: 1 / 3;
+            margin-right: 35rem;
+        `}
+        ${respondTo.tablet`
+            margin-right: 0;            
+        `}
+      }
+      &:nth-child(3) {
+        grid-column: 3 / 2;
+        grid-row: 3 / 4;
+        ${respondTo.tablet`
+            grid-column: 1 / 3;
+        `}
+      }
+
+      img {
+        width: 100%;
+      }
+      /* width: 50%; */
     }
   }
 `;
@@ -191,12 +293,6 @@ const Services = () => {
                 Simple things, you know off the top of your head.
               </li>
             </ul>
-            Your website needs to answer all these questions for customers to
-            start thinking about using you. Most people don’t have their carpets
-            cleaned often, so even if they knew the answers before, they might
-            not remember now. Your customers ask a lot more than just these, so
-            keep building this section with the new questions. Now let’s get
-            down to brass tacks: pricing.
           </p>
         </div>
 
@@ -278,7 +374,6 @@ const Services = () => {
           Kako poteka naš pralni process
         </h2>
         <div className="cleaning-process__container">
-          <div></div>
           <div className="cleaning-process__item">
             <h2 className="cleaning-process__item-number">1</h2>
             <div>
@@ -287,6 +382,13 @@ const Services = () => {
               <p>
                 Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
                 ta način da najprej tresejo preprog, 90% od umazanija je..
+                trenutno smo edini ki čistijo preproge na ta način da najprej
+                tresejo preprog, 90% od umazanija je.. trenutno smo edini ki
+                čistijo preproge na ta način da najprej tresejo preprog, 90% od
+                umazanija je..trenutno smo edini ki čistijo preproge na ta način
+                da najprej tresejo preprog, 90% od umazanija je..trenutno smo
+                edini ki čistijo preproge na ta način da najprej tresejo
+                preprog, 90% od umazanija je..
               </p>
             </div>
           </div>
@@ -294,23 +396,35 @@ const Services = () => {
             <h2 className="cleaning-process__item-number">2</h2>
             <div>
               <img src="/second-step.gif" />
-              <h4 className="cleaning-process__item-title">Tresenje</h4>
+              <h4 className="cleaning-process__item-title">Kemično pranje</h4>
               <p>
                 Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
                 ta način da najprej tresejo preprog, 90% od umazanija je..
+                trenutno smo edini ki čistijo preproge na ta način da najprej
+                tresejo preprog, 90% od umazanija je.. trenutno smo edini ki
+                čistijo preproge na ta način da najprej tresejo preprog, 90% od
+                umazanija je..trenutno smo edini ki čistijo preproge na ta način
+                da najprej tresejo preprog, 90% od umazanija je..trenutno smo
+                edini ki čistijo preproge na ta način da najprej tresejo
+                preprog, 90% od umazanija je..
               </p>
             </div>
           </div>
-          <div></div>
-          <div></div>
           <div className="cleaning-process__item">
             <h2 className="cleaning-process__item-number">3</h2>
             <div>
               <img src="/second-step.gif" />
-              <h4 className="cleaning-process__item-title">Tresenje</h4>
+              <h4 className="cleaning-process__item-title">Usisivanje</h4>
               <p>
                 Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
                 ta način da najprej tresejo preprog, 90% od umazanija je..
+                trenutno smo edini ki čistijo preproge na ta način da najprej
+                tresejo preprog, 90% od umazanija je.. trenutno smo edini ki
+                čistijo preproge na ta način da najprej tresejo preprog, 90% od
+                umazanija je..trenutno smo edini ki čistijo preproge na ta način
+                da najprej tresejo preprog, 90% od umazanija je..trenutno smo
+                edini ki čistijo preproge na ta način da najprej tresejo
+                preprog, 90% od umazanija je..
               </p>
             </div>
           </div>
