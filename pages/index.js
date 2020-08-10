@@ -10,7 +10,7 @@ const HomeStyled = styled.main`
 `;
 const HeroStyled = styled.div`
   padding: 0 10%;
-  height: 80vh;
+  height: calc(100vh - 130px);
   position: relative;
   display: flex;
   align-items: center;
@@ -50,6 +50,10 @@ const HeroStyled = styled.div`
     color: #fff;
   }
 
+  .hero__button {
+    background-color: ${(props) => props.theme.colorPrimary};
+  }
+
   /* STYLES FOR VIDEO */
   .bg-video {
     position: absolute;
@@ -61,6 +65,9 @@ const HeroStyled = styled.div`
     background: black;
     /* opacity: 0.5; */
 
+    background: url(${require("../public/baby-dog.jpg")}) no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
     overflow: hidden;
 
     &::before {
@@ -72,7 +79,7 @@ const HeroStyled = styled.div`
       content: "";
       /* background-color: rgba(94, 190, 215, 0.7); */
       /* opacity: 0.5; */
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.4);
     }
 
     &__content {
@@ -88,11 +95,12 @@ export default function Home() {
     <HomeStyled>
       <HeroStyled>
         <div className="bg-video">
-          <video className="bg-video__content" autoPlay muted loop>
+          {/* <video className="bg-video__content" autoPlay muted loop>
             <source src="/video3.mp4" type="video/mp4" />
             {/* <source src="img/video.webm" type="video/webm" /> */}
-            Your browser is not supported!
-          </video>
+          {/* Your browser is not supported! */}
+          {/* </video>  */}
+          {/* <img src="images/" /> */}
         </div>
 
         {/* We clean. A lot.
@@ -113,7 +121,7 @@ Fair Price. */}
 
         <div className="hero__right-panel">
           <h1>
-            PROMOTIVNI <span>2€</span> po &#13217;
+            PROMOTIVNI <span>3€</span> po &#13217;
           </h1>
         </div>
       </HeroStyled>

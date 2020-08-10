@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 const Meta = (props) => {
   return (
@@ -16,7 +16,7 @@ const Meta = (props) => {
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-ufkApsYu5oKF4y4afg5ZCWbaaUyjTYY&libraries=places"
       ></script>
       {/* <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>  */}
-      <title>Youth Network</title>
+      <title>Aladin</title>
     </Head>
   );
 };

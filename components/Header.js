@@ -5,10 +5,10 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  //   MenuIcon,
   Typography,
   Button,
 } from "@material-ui/core";
+import { Menu } from "@material-ui/icons";
 
 import styled from "styled-components";
 import icons from "../utils/icons";
@@ -99,10 +99,29 @@ const HeaderStyled = styled.header`
           &:not(:last-of-type) {
             margin-right: 3.5rem;
           }
+
+          a {
+            padding-bottom: 3.1rem;
+            /* padding-top: ${(props) => console.log(props.scrolled)}; */
+            transition: all .3s;
+            
+            
+          }
+
+          /* overflow: hidden; */
+          a:hover {
+            border-bottom: .8rem solid ${(props) => props.theme.colorPrimary}; 
+            overflow: hidden;
+          }
+          
         }
       }
     }
+    
   }
+  .scroll .nav ul li a {
+      padding-bottom: 3rem;
+    }
 `;
 
 const Header = () => {
@@ -129,7 +148,7 @@ const Header = () => {
         </p>
         <p>069 652 555</p>
       </div>
-      <div className="header-section">
+      <div className={`header-section ${windowScroll && "scroll"}`}>
         <h1 className="logo">{icons.Logo}</h1>
         <Nav />
       </div>

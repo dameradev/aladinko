@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 // import styled, { ThemeProvider, createGlobalStyle, css } from 'styled-components';
-// import { ThemeProvider as MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+// import {
+//   ThemeProvider as MuiThemeProvider,
+//   createMuiTheme,
+// } from "@material-ui/core";
 // import Meta from '../Meta';
 import Header from "../Header";
+import Footer from "../Footer";
 // import Footer from '../Footer';
 import { withRouter } from "next/router";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
@@ -13,6 +17,11 @@ import { useFetchUser, UserProvider } from "../../utils/user";
 // const MuiTheme = createMuiTheme({
 //   typography: {
 //     htmlFontSize: 10,
+//   },
+//   palette: {
+//     primary: {
+//       main: colors.blue[800],
+//     },
 //   },
 // });
 
@@ -94,6 +103,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  .main-page {
+    margin-top: 10rem;
+    grid-column: full-start /full-end;
+  }
+
 // `;
 
 // // injectGlobal`
@@ -103,14 +117,14 @@ const Page = (props) => {
   const { user, loading } = useFetchUser();
   return (
     <ThemeProvider theme={theme}>
-      <UserProvider value={{ user, loading }}>
-        <StyledPage router={props.router}>
-          <Meta />
-          <GlobalStyle />
-          <Header />
-          {props.children}
-        </StyledPage>
-      </UserProvider>
+      <StyledPage router={props.router}>
+        <Meta />
+        <GlobalStyle />
+        <Header />
+        <main className="main-page">{props.children}</main>
+
+        <Footer />
+      </StyledPage>
     </ThemeProvider>
   );
 };
