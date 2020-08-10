@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
 
-import Link from "next/Link";
+import Link from "next/link";
 import {
   AppBar,
   Toolbar,
