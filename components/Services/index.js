@@ -131,6 +131,37 @@ const ServicesStyled = styled.div`
       }
     }
   }
+
+  .cleaning-process {
+    margin-top: 10rem;
+    padding: 0 10%;
+
+    &__title {
+      text-align: center;
+      padding-bottom: 5rem;
+      font-size: 5rem;
+      font-weight: 300;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      &-title {
+        font-size: 3rem;
+        color: ${(props) => props.theme.colorPrimary};
+        text-transform: uppercase;
+      }
+      /* width: 50%; */
+      &-number {
+        font-size: 15rem;
+        margin-right: 2rem;
+      }
+    }
+  }
 `;
 
 const Services = () => {
@@ -238,6 +269,50 @@ const Services = () => {
               <li>Zapakiranje v specijalni najlon</li>
             </ul>
             <button>Preberi več</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="cleaning-process">
+        <h2 className="cleaning-process__title">
+          Kako poteka naš pralni process
+        </h2>
+        <div className="cleaning-process__container">
+          <div></div>
+          <div className="cleaning-process__item">
+            <h2 className="cleaning-process__item-number">1</h2>
+            <div>
+              <img src="/second-step.gif" />
+              <h4 className="cleaning-process__item-title">Tresenje</h4>
+              <p>
+                Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
+                ta način da najprej tresejo preprog, 90% od umazanija je..
+              </p>
+            </div>
+          </div>
+          <div className="cleaning-process__item">
+            <h2 className="cleaning-process__item-number">2</h2>
+            <div>
+              <img src="/second-step.gif" />
+              <h4 className="cleaning-process__item-title">Tresenje</h4>
+              <p>
+                Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
+                ta način da najprej tresejo preprog, 90% od umazanija je..
+              </p>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div className="cleaning-process__item">
+            <h2 className="cleaning-process__item-number">3</h2>
+            <div>
+              <img src="/second-step.gif" />
+              <h4 className="cleaning-process__item-title">Tresenje</h4>
+              <p>
+                Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
+                ta način da najprej tresejo preprog, 90% od umazanija je..
+              </p>
+            </div>
           </div>
         </div>
       </div>
