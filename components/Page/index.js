@@ -5,7 +5,23 @@ import React, { Component } from "react";
 //   createMuiTheme,
 // } from "@material-ui/core";
 // import Meta from '../Meta';
+
+import {
+  Drawer,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+} from "@material-ui/core";
+
+import { Cancel } from "@material-ui/icons";
 import Header from "../Header";
+import Nav from "../Nav";
 import Footer from "../Footer";
 // import Footer from '../Footer';
 import { withRouter } from "next/router";
@@ -33,6 +49,7 @@ const theme = {
   darkgrey1: "#383838",
 
   colorPrimary: "#2090c0",
+  colorSecondary: "#F02814",
   offWhite: "#EDEDED",
   maxWidth: "80%",
   bs: "0 12px 10px 0 rgba(0, 0, 0, 0.09)",
@@ -49,6 +66,24 @@ const StyledPage = styled.div`
       [col-start] minmax(min-content, 20rem) [col-end]
     )
     [center-end] minmax(10%, 1fr) [full-end];
+
+  .drawer {
+    .mobile-nav {
+      padding: 2rem;
+    }
+
+    .cancel-icon-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .cancel-icon {
+      text-align: right;
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
 `;
 
 // const StyledPage = styled.div`
@@ -112,15 +147,44 @@ const GlobalStyle = createGlobalStyle`
 //   `;
 
 const Page = (props) => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <StyledPage router={props.router}>
         <Meta />
         <GlobalStyle />
-        <Header />
+        <Header handleDrawerOpen={handleDrawerOpen} />
         <main className="main-page">{props.children}</main>
 
         <Footer />
+        <Drawer
+          className="drawer"
+          variant="persistent"
+          anchor="right"
+          open={open}
+          // classes={{
+          //   paper: classes.drawerPaper,
+          // }}
+        >
+          <div className="cancel-icon-container">
+            <IconButton className="cancel-icon" onClick={handleDrawerClose}>
+              <Cancel />
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            <Nav className="mobile-nav" />
+          </List>
+        </Drawer>
       </StyledPage>
     </ThemeProvider>
   );

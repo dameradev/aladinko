@@ -2,9 +2,9 @@ import React from "react";
 
 import Link from "next/link";
 
-const Nav = () => {
+const Nav = (props) => {
   return (
-    <nav className="nav">
+    <nav className={`nav ${props.className}`}>
       <ul>
         <li>
           <Link href="/">
@@ -22,6 +22,10 @@ const Nav = () => {
           </Link>
         </li>
       </ul>
+      <div className="call">
+        Pokličite <br />
+        <a href="tel:+38664163381">064 16 33 81</a>
+      </div>
     </nav>
   );
 };

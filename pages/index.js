@@ -3,92 +3,22 @@
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import icons from "../utils/icons";
+import { HeroStyled } from "./styles/index";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const HomeStyled = styled.main`
   /* color: blue; */
   grid-column: full-start / full-end;
 `;
-const HeroStyled = styled.div`
-  padding: 0 10%;
-  height: calc(100vh - 130px);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  .hero {
-    &__button {
-      margin-top: 2rem;
-      font-size: 2.5rem;
-      padding: 1.25rem 2rem;
-    }
-
-    &__right-panel {
-      h1 {
-        text-transform: uppercase;
-        font-style: unset;
-        font-size: 5rem;
-
-        span {
-          color: ${(props) => props.theme.colorPrimary};
-          font-size: 10rem;
-          display: inline-block;
-          transform: translateY(1rem);
-        }
-      }
-      margin-bottom: 5rem;
-    }
-  }
-  h1 {
-    color: ${(props) => props.theme.lightgrey1};
-    line-height: 6.5rem;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 4.5rem;
-  }
-  h3 {
-    color: #fff;
-  }
-
-  .hero__button {
-    background-color: ${(props) => props.theme.colorPrimary};
-  }
-
-  /* STYLES FOR VIDEO */
-  .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background: black;
-    /* opacity: 0.5; */
-
-    background: url(${require("../public/baby-dog.jpg")}) no-repeat;
-    background-size: cover;
-    background-position-y: bottom;
-    overflow: hidden;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: "";
-      /* background-color: rgba(94, 190, 215, 0.7); */
-      /* opacity: 0.5; */
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    &__content {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-`;
+const images = [
+  { url: "baby-dog.jpg" },
+  { url: "quote.jpg" },
+  // { url: "man-cleaining.jpg" },
+];
 
 export default function Home() {
   return (
@@ -103,11 +33,17 @@ export default function Home() {
           {/* <img src="images/" /> */}
         </div>
 
-        {/* We clean. A lot.
-Clean Home.
-Professional Service.
-Fair Price. */}
-
+        <AutoplaySlider
+          // animation="cubeAnimation"
+          className="bg-video"
+          interval={10000}
+          play={false}
+          cancelOnInteraction={false}
+        >
+          <div data-src="baby-dog.jpg" />
+          <div data-src="quote.jpg" />
+        </AutoplaySlider>
+        {/* <SimpleImageSlider width={896} height={504} images={images} /> */}
         <div className="left-panel">
           {/* <h3>Mehanično pranje preprog</h3> */}
           <h1>Čiste preproge.</h1>
@@ -119,10 +55,15 @@ Fair Price. */}
           </Button>
         </div>
 
-        <div className="hero__right-panel">
-          <h1>
-            PROMOTIVNI <span>3€</span> po &#13217;
-          </h1>
+        <div className="hero__promotion-price">
+          <h2 className="hero__promotion-price__regular-price">
+            6€ po &#13217;
+          </h2>
+          <h2 className="hero__promotion-price__title">
+            PROMOCIJSKA CENA OD <br />
+            <span>3€</span> po &#13217;
+          </h2>
+          <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
         </div>
       </HeroStyled>
       <IconsSection>
@@ -173,7 +114,7 @@ const QuoteSection = styled.div`
   color: #fff;
   position: relative;
 
-  background-image: url(${require("../public/quote.jpg")}) ;
+  background-image: url(${require("../public/quote.jpg")});
   background-size: cover;
   background-position: bottom;
   /* bac */
@@ -193,21 +134,19 @@ const QuoteSection = styled.div`
 
   &::before {
     position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: "";
-      /* background-color: rgba(94, 190, 215, 0.7); */
-      /* opacity: 0.5; */
-      z-index: 0;
-      background-color: rgba(0, 0, 0, 0.2);
-
-
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    /* background-color: rgba(94, 190, 215, 0.7); */
+    /* opacity: 0.5; */
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 `;
 const IconsSection = styled.div`
-margin: 10rem 0;
+  margin: 10rem 0;
   padding: 0 10%;
 
   ul {

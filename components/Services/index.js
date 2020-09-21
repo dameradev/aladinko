@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import icons from "../../utils/icons";
 import { respondTo } from "../../utils/respondTo";
+
+import Prices from "./prices";
+
 const ServicesStyled = styled.div`
   grid-column: full-start / full-end;
   h1 {
@@ -18,7 +22,7 @@ const ServicesStyled = styled.div`
 
     background: #fafafa;
     width: 50%;
-    
+
     ${respondTo.laptop`
          padding: 3rem 10rem;
          
@@ -32,22 +36,36 @@ const ServicesStyled = styled.div`
     `}
     h2 {
       padding-bottom: 2rem;
-      font-size: 3rem;
+      font-size: 3.4rem;
+      text-align: center;
+
       /* color: ${(props) => props.theme.colorPrimary}; */
-      font-weight: 300;
+      font-weight: 500;
       ${respondTo.mobileSmall` 
       
         text-align:center;        
     `}
     }
     p {
-      font-size: 1.8rem;
+      font-size: 2rem;
       ${respondTo.tablet`
       font-size: 1.6rem;
       `}
     }
-    ul {
+    &__benefits-list {
       list-style: square;
+      /* inside; */
+      /* 
+      li {
+        &::marker {
+          width: 2px;
+          font-size: 0.2rem;
+          height: 2px;
+        }
+      } */
+      /* font-size: 10px; */
+      /* list-style: none; */
+      padding: 2rem;
     }
   }
 
@@ -99,14 +117,14 @@ const ServicesStyled = styled.div`
     }
 
     &__list {
-      margin-top: 80%;
+      margin-top: 65%;
       padding: 0 10rem;
       font-size: 2.2rem;
       ${respondTo.tablet`
        padding: 0 5rem;
      `}
 
-    ${respondTo.mobile`
+      ${respondTo.mobile`
        margin-top: 20%;
        font-size: 1.8rem;
      `}
@@ -128,7 +146,6 @@ const ServicesStyled = styled.div`
         list-style: none;
         `}
         li {
-          
         }
         span {
           color: ${(props) => props.theme.colorPrimary};
@@ -235,9 +252,9 @@ const ServicesStyled = styled.div`
 
     &__container {
       display: grid;
-      grid-template-columns: repeat(2, minmax(15rem, 1fr));
+      grid-template-columns: 1fr 1fr;
 
-      ${respondTo.laptop` 
+      /* ${respondTo.laptop` 
          grid-template-columns: 35rem  minmax(15rem, 1fr);
          grid-gap: 5rem;
     `}
@@ -249,17 +266,23 @@ const ServicesStyled = styled.div`
       ${respondTo.mobilePortrait`
         flex-direction: column;
         grid-gap: 2rem;
-     `}
-    
-    
+     `} */
     }
     &__item {
-      display: flex;
-      align-items: center;
+      /* width: 50%; */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+      margin-bottom: 5rem;
+      grid-gap: 2rem;
+
+      /* &-image {
+        display: flex;
+      } */
       &-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: ${(props) => props.theme.colorPrimary};
         text-transform: uppercase;
+        word-break: break-all;
       }
       &-number {
         font-size: 20rem;
@@ -271,47 +294,9 @@ const ServicesStyled = styled.div`
         `}
       }
 
-      &:nth-child(1) {
-        grid-column: 2 / 3;
-        ${respondTo.tablet`
-        grid-column: 1 / 3;
-     `}
-      }
-      &:nth-child(2) {
-        grid-column: 2 / 1;
-        flex-direction: row-reverse;
-        .cleaning-process__item-number {
-          /* font-size: 15rem; */
-          margin-right: 0;
-          margin-left: 2rem;
-        }
-
-        ${respondTo.laptop`
-            grid-column: 1 / 3;
-            margin-right: 35rem;
-        `}
-        ${respondTo.tablet`
-            margin-right: 0;            
-        `}
-        ${respondTo.mobilePortrait`
-        flex-direction: column;
-     `}
-      }
-      &:nth-child(3) {
-        grid-column: 3 / 2;
-        grid-row: 3 / 4;
-        ${respondTo.tablet`
-            grid-column: 1 / 3;
-        `}
-      }
-      ${respondTo.mobilePortrait`
-        flex-direction: column;
-     `}
-      
       img {
         width: 100%;
       }
-      /* width: 50%; */
     }
   }
 `;
@@ -322,25 +307,33 @@ const Services = () => {
       {/* <h1>Naše Storitve</h1> */}
       <div className="hero">
         <div className="left-hero">
-          <h2>Zakaj izbrati Aladin?</h2>
+          <h2>Zakaj izbrati Aladinko?</h2>
           <p>
-            Everyone knows about cleaning carpets, right? Well yes and no. We
-            know it takes time. We know that the carpets need to dry and you
-            need to keep furniture off them. But what more is there? A lot more.
-            When I’ve had my carpets cleaned I’ve wanted to know: How long will
-            it take to clean all the carpets?
-            <ul>
+            Praonica Aladinko d.o.o je profesionalno opremljena praonica tepiha
+            u Mariboru, a po svojoj veličini i profesionalnom pristupu može
+            udvoljiti svim vašim zahtjevima za:
+            <ul className="left-hero__benefits-list">
               <li>
-                How long will it take for the carpets to dry (summer versus
-                winter)?
+                Pranje i čišćenje tepiha koristeći najmodernije tehnologije
+                pranja.
+              </li>
+              <li>Brezplačni prevzem ter dostava v roku 48ur.</li>
+              <li>
+                Najcenejši storitve v Mariboru, ker je celotni proces pranje
+                avtomatiziran.
+              </li>
+              <li>Vrhunsko pranje tepiha sa dugom dlakom</li>
+              <li>
+                Pakiranje preproge v zaščitnu foliju. 100% suvi prijatnog
+                mirisa.
               </li>
               <li>
-                What do you use to clean the carpets, do you use natural
-                cleaners that are safe for kids and pets?
+                Zapleten postopek, ki je sestavljen iz 7 različnih korakov za
+                zagotovitev najvišje kakovosti
               </li>
               <li>
-                Do you remove stains? Do you need a water hook up outside?
-                Simple things, you know off the top of your head.
+                Z uporabo naših storitev lahko osvežite vaš dom, in preprečite
+                nastenek bolezni, raznih alergij ter ostalih škodlivih učinkov
               </li>
             </ul>
           </p>
@@ -356,17 +349,16 @@ const Services = () => {
 
             <ul>
               <li>
-                Make a <span>lasting</span> first impression
+                Naredite <span>trajen</span> prvi vtis
               </li>
               <li>
-                <span>Improve</span> indoor air quality and increase
-                productivity
+                <span> Izboljšajte </span> kakovost zraka v zaprtih prostorih
               </li>
-              <li>
+              {/* <li>
                 <span>Reduce</span> staff sick time
-              </li>
+              </li> */}
               <li>
-                <span>Save</span> money
+                <span> Prihranite </span> denar
               </li>
             </ul>
           </div>
@@ -375,7 +367,8 @@ const Services = () => {
 
       <div className="price-list">
         <h2 className="price-list__title">Cenik</h2>
-
+        <Prices />
+        {/* 
         <div className="price-list__offers">
           <div className="price-list__offer">
             <h3 className="title">Osnovno</h3>
@@ -416,70 +409,113 @@ const Services = () => {
             </ul>
             <button>Preberi več</button>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="cleaning-process">
+      <section className="cleaning-process">
         <h2 className="cleaning-process__title">
           Kako poteka naš pralni process
         </h2>
-        <div className="cleaning-process__container">
-          <div className="cleaning-process__item">
-            <h2 className="cleaning-process__item-number">1</h2>
-            <div>
-              <img src="/second-step.gif" />
-              <h4 className="cleaning-process__item-title">Tresenje</h4>
-              <p>
-                Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
-                ta način da najprej tresejo preprog, 90% od umazanija je..
-                trenutno smo edini ki čistijo preproge na ta način da najprej
-                tresejo preprog, 90% od umazanija je.. trenutno smo edini ki
-                čistijo preproge na ta način da najprej tresejo preprog, 90% od
-                umazanija je..trenutno smo edini ki čistijo preproge na ta način
-                da najprej tresejo preprog, 90% od umazanija je..trenutno smo
-                edini ki čistijo preproge na ta način da najprej tresejo
-                preprog, 90% od umazanija je..
-              </p>
-            </div>
-          </div>
-          <div className="cleaning-process__item">
-            <h2 className="cleaning-process__item-number">2</h2>
-            <div>
-              <img src="/second-step.gif" />
-              <h4 className="cleaning-process__item-title">Kemično pranje</h4>
-              <p>
-                Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
-                ta način da najprej tresejo preprog, 90% od umazanija je..
-                trenutno smo edini ki čistijo preproge na ta način da najprej
-                tresejo preprog, 90% od umazanija je.. trenutno smo edini ki
-                čistijo preproge na ta način da najprej tresejo preprog, 90% od
-                umazanija je..trenutno smo edini ki čistijo preproge na ta način
-                da najprej tresejo preprog, 90% od umazanija je..trenutno smo
-                edini ki čistijo preproge na ta način da najprej tresejo
-                preprog, 90% od umazanija je..
-              </p>
-            </div>
-          </div>
-          <div className="cleaning-process__item">
-            <h2 className="cleaning-process__item-number">3</h2>
-            <div>
-              <img src="/second-step.gif" />
-              <h4 className="cleaning-process__item-title">Usisivanje</h4>
-              <p>
-                Najpomemnješi korak, trenutno smo edini ki čistijo preproge na
-                ta način da najprej tresejo preprog, 90% od umazanija je..
-                trenutno smo edini ki čistijo preproge na ta način da najprej
-                tresejo preprog, 90% od umazanija je.. trenutno smo edini ki
-                čistijo preproge na ta način da najprej tresejo preprog, 90% od
-                umazanija je..trenutno smo edini ki čistijo preproge na ta način
-                da najprej tresejo preprog, 90% od umazanija je..trenutno smo
-                edini ki čistijo preproge na ta način da najprej tresejo
-                preprog, 90% od umazanija je..
-              </p>
-            </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              1. Slikanje tepiha ( sa oštećenjima i izlivenim bojama )
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
           </div>
         </div>
-      </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              2. Merenje Dimenzija (m<sup>2</sup>)
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
+          </div>
+        </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              3. Tresenje preprog v posebnem stroju, ki odstrani 80%
+              prahu/umazanje.
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
+          </div>
+        </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              4. Pranje preprog v avtomatskem pralnem stroju za preproge.
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
+          </div>
+        </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              5. Ožemanje preprog v centrifuge.
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
+          </div>
+        </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              6. Sušenje u komorama
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
+          </div>
+        </div>
+        <div className="cleaning-process__item">
+          <img src="/second-step.gif" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              7. Končno krtačenje, sesanje in pakiranje preprog.
+            </h4>
+            <p>
+              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
+              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
+              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+            </p>
+          </div>
+        </div>
+      </section>
     </ServicesStyled>
   );
 };

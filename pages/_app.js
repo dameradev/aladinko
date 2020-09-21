@@ -2,6 +2,7 @@ import App, { Container } from "next/app";
 // import { ApolloProvider } from 'react-apollo';
 // import withData from '../lib/withData';
 import Page from "../components/Page";
+import "react-awesome-slider/dist/styles.css";
 // import './styles/index.scss'
 
 class MyApp extends App {

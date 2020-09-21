@@ -1,21 +1,7 @@
-import React, { useLayoutEffect, useState, useEffect } from "react";
-
-import Link from "next/link";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-} from "@material-ui/core";
-import { Menu } from "@material-ui/icons";
-
 import styled from "styled-components";
-import icons from "../utils/icons";
+import { respondTo } from "../../utils/respondTo";
 
-import Nav from "./Nav";
-
-const HeaderStyled = styled.header`
+export const HeaderStyled = styled.header`
   /* padding: 1rem 0; */
 
   grid-column: full-start / full-end;
@@ -34,10 +20,10 @@ const HeaderStyled = styled.header`
     justify-content: space-between;
 
     background: ${(props) => props.theme.colorPrimary};
-    
-    color: #fff;
-    animation: all .2s;
 
+    color: #fff;
+    animation: all 0.2s;
+    width: 100%;
 
     &__location {
       span {
@@ -51,13 +37,12 @@ const HeaderStyled = styled.header`
     }
   }
 
-
-
   .header-section {
     /* max-width: ${(props) => props.theme.maxWidth}; */
-    background: rgba(245,245,245,1);
+    background: rgba(245, 245, 245, 1);
+
     /* color: white; */
-    font-weight:600;
+    font-weight: 600;
     font-size: 2rem;
     padding: 0 10%;
     margin: 0 auto;
@@ -68,31 +53,39 @@ const HeaderStyled = styled.header`
     position: fixed;
     width: 100%;
     transform: ${(props) =>
-      !props.windowScroll ? "translateY(0)" : "translateY(-3rem)"};  
-    z-index:100;
+      !props.windowScroll ? "translateY(0)" : "translateY(-3rem)"};
+    z-index: 100;
 
     box-shadow: ${(props) => props.theme.bs};
     /* box-shadow:  inset 3px -40px 14px -31px rgba(58,58,58,1); */
     /* border-bottom: 2px solid ${(props) => props.theme.colorPrimary}; */
 
     .logo {
-      
-      grid-column: center-start / col-end 2;
       text-transform: uppercase;
       font-weight: 400;
-      z-index:200;
+      z-index: 200;
       display: flex;
       align-items: center;
-      svg {
-        width: 10rem;
-        height: 8rem;
+
+      /* svg { */
+      width: 10rem;
+      height: 8rem;
+      /* } */
+      img {
+        width: 100%;
       }
     }
     .nav {
-      grid-column: col-start 7 / center-end;
-      z-index:200;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+
+      ${respondTo.tablet` 
+        display: none;
+      `}
       ul {
         display: flex;
+        margin-right: 3rem;
         li {
           text-transform: uppercase;
 
@@ -103,57 +96,38 @@ const HeaderStyled = styled.header`
           a {
             padding-bottom: 3.1rem;
             /* padding-top: ${(props) => console.log(props.scrolled)}; */
-            transition: all .3s;
-            
-            
+            transition: all 0.3s;
           }
 
           /* overflow: hidden; */
           a:hover {
-            border-bottom: .8rem solid ${(props) => props.theme.colorPrimary}; 
+            border-bottom: 0.8rem solid ${(props) => props.theme.colorPrimary};
             overflow: hidden;
           }
-          
+        }
+      }
+      .call {
+        text-align: center;
+        text-transform: uppercase;
+        a {
+          color: ${(props) => props.theme.colorPrimary};
         }
       }
     }
-    
   }
   .scroll .nav ul li a {
-      padding-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hamburger-icon {
+    display: none;
+    ${respondTo.tablet` 
+      display: block;
+    `}
+
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
     }
+  }
 `;
-
-const Header = () => {
-  const [windowScroll, setWindowScroll] = useState(false);
-
-  // componentDidMount() {
-
-  // }
-
-  const listenScrollEvent = () => {
-    window.pageYOffset > 0 ? setWindowScroll(true) : setWindowScroll(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => listenScrollEvent());
-    // return () => window.removeEventListener("scroll", listenScrollEvent());
-  }, []);
-  console.log(windowScroll);
-  return (
-    <HeaderStyled windowScroll={windowScroll}>
-      <div className="contact-section">
-        <p className="contact-section__location">
-          <span>{icons.Location}</span>Kamniška 28, 2000 Maribor
-        </p>
-        <p>069 652 555</p>
-      </div>
-      <div className={`header-section ${windowScroll && "scroll"}`}>
-        <h1 className="logo">{icons.Logo}</h1>
-        <Nav />
-      </div>
-    </HeaderStyled>
-  );
-};
-
-export default Header;
