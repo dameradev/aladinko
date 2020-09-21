@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import icons from "../utils/icons";
-import { HeroStyled } from "./styles/index";
+import { HeroStyled } from "../components/styles/index";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 
