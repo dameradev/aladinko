@@ -5,10 +5,12 @@ import Icons from "../../utils/icons";
 
 const TableStyled = styled.div`
   width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
+  /* margin: 0 auto; */
 
   .container-table100 {
     width: 100%;
+    /* max-width: 200px; */
     /* min-height: 100vh; */
 
     display: -webkit-box;
@@ -41,13 +43,13 @@ const TableStyled = styled.div`
   }
 
   .column100 {
-    width: 130px;
+    width: 10rem;
     padding-left: 25px;
   }
 
   .column100.column1 {
     width: 265px;
-    padding-left: 42px;
+    padding-left: 2rem;
   }
 
   .row100.head th {
@@ -64,14 +66,14 @@ const TableStyled = styled.div`
 [ Ver1 ]*/
   .table100.ver1 td {
     /* font-family: Montserrat-Regular; */
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     color: #808080;
     line-height: 1.4;
   }
 
   .table100.ver1 th {
     /* font-family: Montserrat-Medium; */
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #fff;
     line-height: 1.4;
     text-transform: uppercase;
@@ -201,7 +203,7 @@ const Prices = () => {
           <li>{Icons.DustMachine}Tresenje preproge</li>
           <li>{Icons.ChemicalWashing}Kemično pranje</li>
           <li>{Icons.Centrifuge}Centrifuga z čista voda</li>
-          <li>{Icons.Vacuming}Usisuvanje</li>
+          <li>{Icons.Vacuming}Sesanje</li>
           <li>{Icons.Brushing}Krtačenje</li>
           <li>{Icons.Truck}Dostava in prevzem</li>
         </ul>

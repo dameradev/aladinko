@@ -1,4 +1,4 @@
-// import Head from 'next/head'
+import { useEffect } from "react"; // import Head from 'next/head'
 
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
@@ -8,18 +8,20 @@ import { HeroStyled } from "../components/styles/index";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import ReactPlayer from "react-player";
-import FacebookPlayer from "react-facebook-player";
-import { FacebookProvider, Like, EmbeddedPost } from "react-facebook";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const HomeStyled = styled.main`
   /* color: blue; */
-  grid-column: full-start / full-end;
+  /* grid-column: full-start / full-end; */
 
-  .fb-video {
-    height: 10rem;
-    width: 10rem;
+  width: 100%;
+  .promo-video {
+    /* padding: 2rem 0; */
+    text-align: center;
+    h2 {
+      padding: 4rem;
+    }
   }
 `;
 
@@ -84,28 +86,15 @@ export default function Home() {
         </div>
       </HeroStyled>
 
-      <div>
-        <FacebookProvider appId="207395400191664">
-          <EmbeddedPost
-            href="https://www.facebook.com/aladinkopreproge/posts/107898137737158"
-            width="500"
-          />
-        </FacebookProvider>
-      </div>
-      <div>
-        {/* <ReactPlayer
-          className="facebook"
-          url="https://www.facebook.com/aladinkopreproge/posts/107898137737158"
+      <div className="promo-video">
+        <h2>Poglejte si naš proces pranja</h2>
+        <ReactPlayer
+          url="https://youtu.be/TiZB6gRWTWc"
           // url=""
+          width="100%"
           controls
-          playing
-        /> */}
-        <div
-          class="fb-video"
-          data-href="https://www.facebook.com/aladinkopreproge/posts/107898137737158"
-          data-show-text="true"
-          data-width=""
-        ></div>
+          // playing
+        />
       </div>
 
       {/* <IconsSection>

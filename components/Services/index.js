@@ -239,6 +239,9 @@ const ServicesStyled = styled.div`
   .cleaning-process {
     margin-top: 10rem;
     padding: 0 10%;
+    ${respondTo.mobilePortrait`
+       margin-top: 3rem;
+     `}
 
     &__title {
       text-align: center;
@@ -247,6 +250,7 @@ const ServicesStyled = styled.div`
       font-weight: 300;
       ${respondTo.mobilePortrait`
         padding-bottom: 2rem;
+        font-size: 3rem;
      `}
     }
 
@@ -271,7 +275,7 @@ const ServicesStyled = styled.div`
     &__item {
       /* width: 50%; */
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
       margin-bottom: 5rem;
       grid-gap: 2rem;
 
@@ -283,6 +287,11 @@ const ServicesStyled = styled.div`
         color: ${(props) => props.theme.colorPrimary};
         text-transform: uppercase;
         word-break: break-all;
+
+        ${respondTo.mobilePortrait`
+          font-size: 1.8rem;
+          // margin-right: 0;
+        `}
       }
       &-number {
         font-size: 20rem;
@@ -296,6 +305,7 @@ const ServicesStyled = styled.div`
 
       img {
         width: 100%;
+        height: 20rem;
       }
     }
   }
@@ -417,7 +427,7 @@ const Services = () => {
           Kako poteka naš pralni process
         </h2>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/v1600949013/e5lqdk3kz7cn91hsbnl2.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
@@ -431,7 +441,7 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/v1600947575/t6kc9ygwts6zesleiojh.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
@@ -445,7 +455,7 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_460/v1600947773/oer8w1ele4jv9r2uxyf3.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
@@ -460,7 +470,7 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_640/v1600947888/fevb6bdepzmkolr5xbvd.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
@@ -474,7 +484,7 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_634/v1600948509/bcdwjp25jmwriiiagoxl.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
@@ -488,7 +498,7 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_640/v1600948643/whovfqcuq3c4vblkk7mh.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
@@ -502,7 +512,7 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <img src="/second-step.gif" />
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_646/v1600948788/stiipgbqqh9n23ibm3cz.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
