@@ -32,9 +32,9 @@ const Header = (props) => {
     <HeaderStyled windowScroll={windowScroll}>
       <div className="contact-section">
         <p className="contact-section__location">
-          <span>{icons.Location}</span>Kamniška 28, 2000 Maribor
+          <span>{icons.Location}</span>Loka 5, 2205 Starše
         </p>
-        <p>069 652 555d</p>
+        {/* <p>069 652 555d</p> */}
       </div>
       <div className={`header-section ${windowScroll && "scroll"}`}>
         {/* <h1 className="logo">{icons.Logo}</h1> */}

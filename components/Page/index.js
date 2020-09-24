@@ -66,10 +66,31 @@ const StyledPage = styled.div`
       [col-start] minmax(min-content, 20rem) [col-end]
     )
     [center-end] minmax(10%, 1fr) [full-end];
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
 
   .drawer {
     .mobile-nav {
-      padding: 2rem;
+      font-size: 2.5rem;
+      padding: 3rem;
+      text-align: center;
+      li {
+        padding-bottom: 1.5rem;
+      }
+      .call {
+        padding-top: 3rem;
+        a {
+          color: ${(props) => props.theme.colorPrimary};
+          font-size: 3rem;
+        }
+      }
     }
 
     .cancel-icon-container {
@@ -160,6 +181,7 @@ const Page = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <StyledPage router={props.router}>
+        {open && <div onClick={handleDrawerClose} className="backdrop" />}
         <Meta />
         <GlobalStyle />
         <Header handleDrawerOpen={handleDrawerOpen} />
@@ -171,6 +193,7 @@ const Page = (props) => {
           variant="persistent"
           anchor="right"
           open={open}
+          // open={true}
           // classes={{
           //   paper: classes.drawerPaper,
           // }}
