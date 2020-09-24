@@ -4,14 +4,23 @@ import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import icons from "../utils/icons";
 import { HeroStyled } from "../components/styles/index";
+
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
+import ReactPlayer from "react-player";
+import FacebookPlayer from "react-facebook-player";
+import { FacebookProvider, Like, EmbeddedPost } from "react-facebook";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const HomeStyled = styled.main`
   /* color: blue; */
   grid-column: full-start / full-end;
+
+  .fb-video {
+    height: 10rem;
+    width: 10rem;
+  }
 `;
 
 const images = [
@@ -23,6 +32,14 @@ const images = [
 export default function Home() {
   return (
     <HomeStyled>
+      <div id="fb-root"></div>
+      <script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=207395400191664&autoLogAppEvents=1"
+        nonce="YBpv6AFg"
+      ></script>
       <HeroStyled>
         <div className="bg-video">
           {/* <video className="bg-video__content" autoPlay muted loop>
@@ -66,6 +83,31 @@ export default function Home() {
           <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
         </div>
       </HeroStyled>
+
+      <div>
+        <FacebookProvider appId="207395400191664">
+          <EmbeddedPost
+            href="https://www.facebook.com/aladinkopreproge/posts/107898137737158"
+            width="500"
+          />
+        </FacebookProvider>
+      </div>
+      <div>
+        {/* <ReactPlayer
+          className="facebook"
+          url="https://www.facebook.com/aladinkopreproge/posts/107898137737158"
+          // url=""
+          controls
+          playing
+        /> */}
+        <div
+          class="fb-video"
+          data-href="https://www.facebook.com/aladinkopreproge/posts/107898137737158"
+          data-show-text="true"
+          data-width=""
+        ></div>
+      </div>
+
       {/* <IconsSection>
         <ul>
           <li>

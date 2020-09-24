@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const HeroStyled = styled.div`
   padding: 0 10%;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 100px);
   position: relative;
   display: flex;
   align-items: center;
