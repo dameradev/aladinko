@@ -4,7 +4,7 @@ import { respondTo } from "../../utils/respondTo";
 export const HeaderStyled = styled.header`
   /* padding: 1rem 0; */
 
-  grid-column: full-start / full-end;
+  /* grid-column: full-start / full-end; */
 
   /* color: #fff; */
   /* justify-content: space-between; */

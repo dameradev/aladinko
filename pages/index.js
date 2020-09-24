@@ -46,13 +46,13 @@ export default function Home() {
         {/* <SimpleImageSlider width={896} height={504} images={images} /> */}
         <div className="left-panel">
           {/* <h3>Mehanično pranje preprog</h3> */}
-          <h1>Čiste preproge.</h1>
-          <h1>Profesionalna storitev.</h1>
-          <h1>Poštena cena.</h1>
+          <h1>Čiste preproge</h1>
+          <h1>Profesionalna storitev</h1>
+          <h1>Poštena cena</h1>
           {/* <h3>Promotivni 2€ po &#13217;</h3> */}
-          <Button className="hero__button" variant="contained" color="primary">
+          {/* <Button className="hero__button" variant="contained" color="primary">
             Preberi več
-          </Button>
+          </Button> */}
         </div>
 
         <div className="hero__promotion-price">
@@ -66,7 +66,7 @@ export default function Home() {
           <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
         </div>
       </HeroStyled>
-      <IconsSection>
+      {/* <IconsSection>
         <ul>
           <li>
             <h3>Dostava/Prevzem</h3>
@@ -85,9 +85,9 @@ export default function Home() {
             <i>{icons.MachineWashing}</i>
           </li>
         </ul>
-      </IconsSection>
+      </IconsSection> */}
 
-      <QuoteSection>
+      {/* <QuoteSection>
         <h1>"Dom je sreča. Čist dom pa je sreča na kvadrat"</h1>
         <p>
           This quote is our inspiration and that’s why we provide you carpet
@@ -97,7 +97,7 @@ export default function Home() {
           to all small or large things that have great importance in your life.
           So, give us a chance and get a glorious home at flat prices.
         </p>
-      </QuoteSection>
+      </QuoteSection> */}
     </HomeStyled>
   );
   // return <h1> dame</h1>;

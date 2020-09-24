@@ -57,15 +57,8 @@ const theme = {
 };
 
 const StyledPage = styled.div`
-  display: grid;
+  /* display: grid; */
 
-  grid-template-columns:
-    [full-start]
-    10% [center-start]repeat(
-      8,
-      [col-start] minmax(min-content, 20rem) [col-end]
-    )
-    [center-end] minmax(10%, 1fr) [full-end];
   .backdrop {
     position: absolute;
     top: 0;
@@ -187,7 +180,7 @@ const Page = (props) => {
         <Header handleDrawerOpen={handleDrawerOpen} />
         <main className="main-page">{props.children}</main>
 
-        <Footer />
+        {/* <Footer /> */}
         <Drawer
           className="drawer"
           variant="persistent"

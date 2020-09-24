@@ -1,14 +1,18 @@
+import { respondTo } from "../../utils/respondTo";
 import styled from "styled-components";
 
 export const HeroStyled = styled.div`
-  /* @import "react-awesome-slider/dist/styles.css";
-  @import "react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss"; */
   padding: 0 10%;
   height: calc(100vh - 130px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${respondTo.tablet` 
+      flex-direction: column;
+      justify-content: center;
+  `}
 
   .hero {
     &__button {
@@ -21,9 +25,17 @@ export const HeroStyled = styled.div`
       position: relative;
       padding: 5rem;
 
+      ${respondTo.tablet` 
+        margin-bottom: 2rem;
+      `}
       text-align: center;
       color: ${(props) => props.theme.darkgrey1};
       &__regular-price {
+        ${respondTo.mobile` 
+        font-size: 3rem;
+        max-width: 200px !important;
+      `}
+
         font-size: 5rem;
         position: relative;
         &::before {
@@ -54,7 +66,7 @@ export const HeroStyled = styled.div`
         font-style: unset;
         font-size: 3.5rem;
         line-height: 6.5rem;
-        width: 40rem;
+        /* width: 40rem; */
 
         span {
           color: ${(props) => props.theme.colorSecondary};
@@ -66,7 +78,7 @@ export const HeroStyled = styled.div`
         }
       }
 
-      &__notice {
+      &-notice {
         position: absolute;
         bottom: 0.5rem;
         right: 2rem;
@@ -86,15 +98,30 @@ export const HeroStyled = styled.div`
         left: 0;
         border-radius: 1rem;
         z-index: -1;
+        ${respondTo.mobile` 
+        font-size: 3rem;
+        max-width: 100%;
+      `}
       }
     }
   }
-  h1 {
-    color: ${(props) => props.theme.lightgrey1};
-    line-height: 6.5rem;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 4.5rem;
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem;
+
+    ${respondTo.tablet` 
+      display:none;
+     `}
+    /* color: */
+    h1 {
+      color: ${(props) => props.theme.lightgrey1};
+      line-height: 6.5rem;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 4.5rem;
+    }
   }
   h3 {
     color: #fff;
