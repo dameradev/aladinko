@@ -12,7 +12,7 @@ const ServicesStyled = styled.div`
   }
   .hero {
     display: flex;
-    ${respondTo.mobileSmall` 
+    ${respondTo.tabletMini` 
       flex-direction:column;
     `}
   }
@@ -31,7 +31,7 @@ const ServicesStyled = styled.div`
     ${respondTo.tablet`
         padding: 3rem 5rem;
      `}
-     ${respondTo.mobileSmall` 
+     ${respondTo.tabletMini` 
       width: 100%;
     `}
     h2 {
@@ -41,7 +41,7 @@ const ServicesStyled = styled.div`
 
       /* color: ${(props) => props.theme.colorPrimary}; */
       font-weight: 500;
-      ${respondTo.mobileSmall` 
+      ${respondTo.tabletMini` 
       
         text-align:center;        
     `}
@@ -71,7 +71,7 @@ const ServicesStyled = styled.div`
 
   .right-hero {
     width: 50%;
-    ${respondTo.mobileSmall` 
+    ${respondTo.tabletMini` 
       width: 100%;
     `}
     /* height: calc(100vh -15rem); */
@@ -111,17 +111,18 @@ const ServicesStyled = styled.div`
         height: 20rem;
         left: -2rem
      `}
-     ${respondTo.mobile`
+     ${respondTo.tablet`
          display:none;
      `}
     }
 
     &__list {
       margin-top: 65%;
-      padding: 0 10rem;
+      padding: 10rem;
       font-size: 2.2rem;
-      ${respondTo.tablet`
-       padding: 0 5rem;
+      ${respondTo.laptop`
+       padding:  6rem 4rem;
+       
      `}
 
       ${respondTo.mobile`
@@ -129,7 +130,7 @@ const ServicesStyled = styled.div`
        font-size: 1.8rem;
      `}
 
-    ${respondTo.mobileSmall` 
+    ${respondTo.tabletMini` 
         margin-top: 2rem;
         text-align:center;        
     `}
@@ -142,7 +143,7 @@ const ServicesStyled = styled.div`
       ul {
         list-style: circle;
         padding-left: 2.2rem;
-        ${respondTo.mobileSmall` 
+        ${respondTo.tabletMini` 
         list-style: none;
         `}
         li {
@@ -156,7 +157,7 @@ const ServicesStyled = styled.div`
   }
 
   .price-list {
-    padding: 0 15%;
+    padding: 0 10%;
 
     ${respondTo.laptop` 
         padding: 0 10%;
@@ -237,15 +238,24 @@ const ServicesStyled = styled.div`
   }
 
   .cleaning-process {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
     margin-top: 10rem;
     padding: 0 10%;
+    ${respondTo.mobileSmall`
+        grid-template-columns: 1fr;
+        display: block;
+     `}
     ${respondTo.mobilePortrait`
        margin-top: 3rem;
      `}
 
     &__title {
+      grid-column: 1/3;
       text-align: center;
       padding-bottom: 5rem;
+
       font-size: 5rem;
       font-weight: 300;
       ${respondTo.mobilePortrait`
@@ -257,6 +267,8 @@ const ServicesStyled = styled.div`
     &__container {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      /* justify-items: center; */
 
       /* ${respondTo.laptop` 
          grid-template-columns: 35rem  minmax(15rem, 1fr);
@@ -275,7 +287,7 @@ const ServicesStyled = styled.div`
     &__item {
       /* width: 50%; */
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
       margin-bottom: 5rem;
       grid-gap: 2rem;
 
@@ -283,7 +295,8 @@ const ServicesStyled = styled.div`
         display: flex;
       } */
       &-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 3.2rem;
         color: ${(props) => props.theme.colorPrimary};
         text-transform: uppercase;
         word-break: break-all;
@@ -309,11 +322,19 @@ const ServicesStyled = styled.div`
       }
     }
   }
+
+  .warning-message {
+    grid-column: 1/3;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 500;
+    color: ${(props) => props.theme.colorPrimary};
+  }
 `;
 
 const Services = () => {
   return (
-    <ServicesStyled>
+    <ServicesStyled id="services">
       {/* <h1>Naše Storitve</h1> */}
       <div className="hero">
         <div className="left-hero">
@@ -327,7 +348,7 @@ const Services = () => {
                 Pranje i čišćenje tepiha koristeći najmodernije tehnologije
                 pranja.
               </li>
-              <li>Brezplačni prevzem ter dostava v roku 48ur.</li>
+              {/* <li>Brezplačni prevzem ter dostava v roku 48ur.</li> */}
               <li>
                 Najcenejši storitve v Mariboru, ker je celotni proces pranje
                 avtomatiziran.
@@ -351,7 +372,7 @@ const Services = () => {
 
         <div className="right-hero">
           <div className="right-hero__image-container">
-            <img src="/man-cleaning.jpg" />
+            <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_911/v1601146574/galzs8tgse7z6z4tnbib.jpg" />
           </div>
 
           <div className="right-hero__list">
@@ -375,7 +396,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="price-list">
+      <div id="price-list" className="price-list">
         <h2 className="price-list__title">Cenik</h2>
         <Prices />
         {/* 
@@ -422,25 +443,39 @@ const Services = () => {
         </div> */}
       </div>
 
-      <section className="cleaning-process">
+      <section id="cleaning-process" className="cleaning-process">
         <h2 className="cleaning-process__title">
           Kako poteka naš pralni process
         </h2>
+
+        <div className="cleaning-process__item">
+          <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_777/v1602247951/aeucmnjkga5fieoe1bdr.jpg" />
+
+          <div>
+            <h4 className="cleaning-process__item-title">
+              1. Prevzem in vrednotenje
+            </h4>
+            <p>
+              Za vsa naročila nad 6m2 na območju maribor, pridemo mi iskat. Po
+              prejemu preproge osebje pralnice oceni stopnjo umazanosti in
+              določi način obdelave tkanine.
+            </p>
+          </div>
+        </div>
         <div className="cleaning-process__item">
           <img src="https://res.cloudinary.com/dvvbls283/image/upload/v1600949013/e5lqdk3kz7cn91hsbnl2.jpg" />
 
           <div>
             <h4 className="cleaning-process__item-title">
-              1. Slikanje tepiha ( sa oštećenjima i izlivenim bojama )
+              2. Slikanje tepiha ( sa oštećenjima i izlivenim bojama )
             </h4>
             <p>
-              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
-              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
-              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+              Pred kakršnim koli dejanjem se preproge s poškodbami fotografirajo
+              in arhivirajo v odjemalski bazi podatkov.
             </p>
           </div>
         </div>
-        <div className="cleaning-process__item">
+        {/* <div className="cleaning-process__item">
           <img src="https://res.cloudinary.com/dvvbls283/image/upload/v1600947575/t6kc9ygwts6zesleiojh.jpg" />
 
           <div>
@@ -453,7 +488,7 @@ const Services = () => {
               oštećenjima se slikaju i arhiviraju u bazu klijenata.
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="cleaning-process__item">
           <img src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,h_460/v1600947773/oer8w1ele4jv9r2uxyf3.jpg" />
 
@@ -463,9 +498,9 @@ const Services = () => {
               prahu/umazanje.
             </h4>
             <p>
-              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
-              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
-              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+              Prvi korak pri globinskem čiščenju preprog je strojno
+              odstranjevanje vsa groba umazanija, prah in las s suhe preproge za
+              izboljšanje kakovosti pranja.
             </p>
           </div>
         </div>
@@ -477,9 +512,10 @@ const Services = () => {
               4. Pranje preprog v avtomatskem pralnem stroju za preproge.
             </h4>
             <p>
-              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
-              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
-              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+              Preproga je namočena v vodi za boljše razkrojevanje nečistoč in
+              pripravo za pranje so madeži obdelani z ustreznimi sredstvi in
+              ​​mehki se nanese s čopiči in krožnimi gibi detergent, ki prodre
+              do votka preproge.
             </p>
           </div>
         </div>
@@ -491,9 +527,11 @@ const Services = () => {
               5. Ožemanje preprog v centrifuge.
             </h4>
             <p>
-              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
-              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
-              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+              Izpiranje preprog je strogo nadzorovan postopek, ki spremlja
+              čistočo voda, ki prihaja iz stroja. Ko je voda čista, se dotok
+              ustavi in ​​začne se postopek centrifugiranja. Centrifuga preproge
+              ne posuši odteče na zelo nizek odstotek vlažnosti, do 5%
+              vlažnosti.
             </p>
           </div>
         </div>
@@ -505,9 +543,10 @@ const Services = () => {
               6. Sušenje u komorama
             </h4>
             <p>
-              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
-              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
-              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+              V sušilni komori preproge sušimo pri optimalni temperaturi z
+              strojno razvlaževanje. Preproga se posuši v nekaj ure, hkrati pa
+              preprog je zaščiten pred negativnimi zunanjimi in atmosferskimi
+              vplivi vplivi, kot so sonce, veter, dež in prah.
             </p>
           </div>
         </div>
@@ -516,15 +555,21 @@ const Services = () => {
 
           <div>
             <h4 className="cleaning-process__item-title">
-              7. Končno krtačenje, sesanje in pakiranje preprog.
+              7. Končno krtačenje, sesanje, pakiranje in dostava preprog.
             </h4>
             <p>
-              Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
-              arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
-              oštećenjima se slikaju i arhiviraju u bazu klijenata.
+              Suha preproga je še enkrat posesana, kar odpravi kakršno koli
+              ostanki prahu in umazanije. Oprane in posušene preproge so zavite
+              folije, da ohranijo svojo čistost in svežino. Preprog je opran in
+              pripravljen za dostavo ali prevzem.
             </p>
           </div>
         </div>
+        <p className="warning-message">
+          Opmonik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
+          6m<sup>2</sup> v občini Maribor in Starše. Izven Maribor je potreben
+          predhoden dogovor.
+        </p>
       </section>
     </ServicesStyled>
   );

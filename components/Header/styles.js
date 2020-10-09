@@ -80,7 +80,7 @@ export const HeaderStyled = styled.header`
       display: flex;
       align-items: center;
 
-      ${respondTo.tablet` 
+      ${respondTo.tabletMini` 
         display: none;
       `}
       ul {
@@ -121,7 +121,7 @@ export const HeaderStyled = styled.header`
 
   .hamburger-icon {
     display: none;
-    ${respondTo.tablet` 
+    ${respondTo.tabletMini` 
       display: block;
     `}
 

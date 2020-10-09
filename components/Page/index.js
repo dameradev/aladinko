@@ -115,6 +115,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: 'Roboto';
+    scroll-behavior: smooth;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -198,9 +199,10 @@ const Page = (props) => {
           </div>
           <Divider />
           <List>
-            <Nav className="mobile-nav" />
+            <Nav className="mobile-nav" handleDrawerClose={handleDrawerClose} />
           </List>
         </Drawer>
+        <Footer />
       </StyledPage>
     </ThemeProvider>
   );

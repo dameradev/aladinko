@@ -11,6 +11,7 @@ import { Menu } from "@material-ui/icons";
 import icons from "../../utils/icons";
 
 import Nav from "../Nav";
+import Logo from "../Logo";
 
 const Header = (props) => {
   const [windowScroll, setWindowScroll] = useState(false);
@@ -19,31 +20,27 @@ const Header = (props) => {
 
   // }
 
-  const listenScrollEvent = () => {
-    window.pageYOffset > 0 ? setWindowScroll(true) : setWindowScroll(false);
-  };
+  // const listenScrollEvent = () => {
+  //   window.pageYOffset > 0 ? setWindowScroll(true) : setWindowScroll(false);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => listenScrollEvent());
-    // return () => window.removeEventListener("scroll", listenScrollEvent());
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => listenScrollEvent());
+  //   // return () => window.removeEventListener("scroll", listenScrollEvent());
+  // }, []);
 
   return (
     <HeaderStyled windowScroll={windowScroll}>
-      <div className="contact-section">
+      {/* <div className="contact-section">
         <p className="contact-section__location">
           <span>{icons.Location}</span>Loka 5, 2205 Starše
         </p>
         {/* <p>069 652 555d</p> */}
-      </div>
-      <div className={`header-section ${windowScroll && "scroll"}`}>
+      {/* </div> */}
+      {/* ${windowScroll && "scroll"} */}
+      <div className={`header-section `}>
         {/* <h1 className="logo">{icons.Logo}</h1> */}
-        <Link href="/">
-          <a className="logo">
-            <img src="aladinko.png" />
-          </a>
-        </Link>
-
+        <Logo />
         <Nav />
         <IconButton
           color="inherit"

@@ -125,6 +125,10 @@ const TableStyled = styled.div`
 const Prices = () => {
   return (
     <TableStyled>
+      <p className="warning-message">
+        Opmonik: Do 31.10.2020 vseh vrst preprog so z promocijski ceni od 3€ na
+        m<sup>2</sup>
+      </p>
       <div class="container-table100">
         <div class="wrap-table100">
           <div class="table100 ver1 m-b-110">
@@ -164,31 +168,31 @@ const Prices = () => {
                     &#13217;
                   </td>
                   <td class="column100 column3" data-column="column3">
-                    4 €
+                    6 €
                   </td>
                 </tr>
 
                 <tr class="row100">
                   <td class="column100 column1" data-column="column1">
-                    Debelejše preproge
+                    Volnena, shaggy, močneje umazana
                   </td>
                   <td class="column100 column2" data-column="column2">
                     &#13217;
                   </td>
                   <td class="column100 column3" data-column="column3">
-                    5 €
+                    9 €
                   </td>
                 </tr>
 
                 <tr class="row100">
                   <td class="column100 column1" data-column="column1">
-                    Ročno tkana
+                    Orientalska/Perzijska
                   </td>
                   <td class="column100 column2" data-column="column2">
                     &#13217;
                   </td>
                   <td class="column100 column3" data-column="column3">
-                    8 €
+                    12 €
                   </td>
                 </tr>
               </tbody>

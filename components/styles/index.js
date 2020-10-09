@@ -33,7 +33,9 @@ export const HeroStyled = styled.div`
       &__regular-price {
         ${respondTo.mobile` 
         font-size: 3rem;
-        max-width: 200px !important;
+        
+        text-align: center;
+        margin-right: 0;
       `}
 
         font-size: 5rem;
@@ -48,6 +50,12 @@ export const HeroStyled = styled.div`
           top: 4.5rem;
           left: 9.5rem;
           transform: rotate(45deg);
+
+          ${respondTo.mobile` 
+            top: 3rem;
+            width: 5rem;
+            left: 8.4rem;
+          `}
         }
         &::after {
           content: "";
@@ -59,6 +67,11 @@ export const HeroStyled = styled.div`
           top: 4.5rem;
           left: 9.5rem;
           transform: rotate(-45deg);
+          ${respondTo.mobile` 
+            top: 3rem;
+            width: 5rem;
+            left: 8.4rem;
+          `}
         }
       }
       &__title {

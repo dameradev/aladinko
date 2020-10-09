@@ -1,13 +1,17 @@
 import { useEffect } from "react"; // import Head from 'next/head'
-
+import Link from "next/link";
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import icons from "../utils/icons";
 import { HeroStyled } from "../components/styles/index";
 
+import { respondTo } from "../utils/respondTo";
+
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import ReactPlayer from "react-player";
+
+import Services from "../components/Services";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -16,12 +20,51 @@ const HomeStyled = styled.main`
   /* grid-column: full-start / full-end; */
 
   width: 100%;
-  .promo-video {
-    /* padding: 2rem 0; */
-    text-align: center;
+  .video {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    ${respondTo.tabletMini` 
+      grid-template-columns: 1fr;
+  `}
+
     h2 {
-      padding: 4rem;
+      padding: 2rem 0;
     }
+    &__description {
+      padding: 4rem 2rem;
+      text-align: center;
+
+      ${respondTo.laptop` 
+        padding: 4rem 0;
+      `}
+      ${respondTo.tabletMini` 
+        padding: 2rem 0;
+        font-size: 1.6rem;
+      `}
+      p {
+        font-size: 2rem;
+        text-align: justify;
+        padding: 0 8rem;
+        ${respondTo.tablet` 
+          padding: 0 4rem;
+          font-size: 1.6rem;
+        `}
+
+        a {
+          padding-left: 0.8rem;
+          font-size: 2.2rem;
+          color: ${(props) => props.theme.colorPrimary};
+        }
+      }
+    }
+  }
+  .promo-video {
+    padding: 4rem 2rem;
+    text-align: center;
+    /* h2 {
+      padding: 4rem;
+    } */
   }
 `;
 
@@ -30,6 +73,13 @@ const images = [
   { url: "quote.jpg" },
   // { url: "man-cleaining.jpg" },
 ];
+
+const scrollToElement = (id) => {
+  const element = document.getElementById(id);
+  window.scrollTo({
+    top: element.getBoundingClientRect().top + window.scrollY - 100,
+  });
+};
 
 export default function Home() {
   return (
@@ -56,7 +106,7 @@ export default function Home() {
           // animation="cubeAnimation"
           className="bg-video"
           interval={10000}
-          play={false}
+          play={true}
           cancelOnInteraction={false}
         >
           <div data-src="baby-dog.jpg" />
@@ -86,49 +136,35 @@ export default function Home() {
         </div>
       </HeroStyled>
 
-      <div className="promo-video">
-        <h2>Poglejte si naš proces pranja</h2>
-        <ReactPlayer
-          url="https://youtu.be/TiZB6gRWTWc"
-          // url=""
-          width="100%"
-          controls
-          // playing
-        />
-      </div>
-
-      {/* <IconsSection>
-        <ul>
-          <li>
-            <h3>Dostava/Prevzem</h3>
-            <i>{icons.Truck}</i>
-          </li>
-          <li>
-            <h3>Kakovostna Storitev</h3>
-            <i>{icons.Quality}</i>
-          </li>
-          <li>
-            <h3>Konec za 1 dan</h3>
-            <i>{icons.FastService}</i>
-          </li>
-          <li>
-            <h3>Strojno Pranje</h3>
-            <i>{icons.MachineWashing}</i>
-          </li>
-        </ul>
-      </IconsSection> */}
-
-      {/* <QuoteSection>
-        <h1>"Dom je sreča. Čist dom pa je sreča na kvadrat"</h1>
-        <p>
-          This quote is our inspiration and that’s why we provide you carpet
-          cleaning NYC services which are not only good for you but also
-          increase hygiene and health of your space. Here, you will sense a
-          flawless and spotless cleaning of your home. We pay personal attention
-          to all small or large things that have great importance in your life.
-          So, give us a chance and get a glorious home at flat prices.
-        </p>
-      </QuoteSection> */}
+      <section className="video">
+        <div className="promo-video">
+          <h2>Poglejte si naš proces pranja</h2>
+          <ReactPlayer
+            url="https://youtu.be/TiZB6gRWTWc"
+            // url=""
+            width="100%"
+            controls
+            // playing
+          />
+        </div>
+        <article className="video__description">
+          <h2>Zagotovitev 100% kakovost</h2>
+          <p>
+            Kot je razvidno iz posnetka, vaš preprog gre cež 6 različih korakov,
+            da bi zagotovili čiste preproge. Stroje ki jih mi uporabljamo so se
+            uporabljajo v vseh profesionalnih pralnic preproge.
+          </p>
+          <br />
+          <p>
+            Mi smo edini v Mariboru ki uporabljajo takšen tip stroje, v procesu
+            pranja preproge. Podrobnejši opis vsak korak v našem procesu najdete
+            {/* <Link href="/#cleaning-process"> */}
+            <a onClick={() => scrollToElement("cleaning-process")}>tukaj.</a>
+            {/* </Link> */}
+          </p>
+        </article>
+      </section>
+      <Services />
     </HomeStyled>
   );
   // return <h1> dame</h1>;
