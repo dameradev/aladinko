@@ -12,6 +12,7 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 import ReactPlayer from "react-player";
 
 import Services from "../components/Services";
+import SEO from "../components/SEO";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -83,89 +84,94 @@ const scrollToElement = (id) => {
 
 export default function Home() {
   return (
-    <HomeStyled>
-      <div id="fb-root"></div>
-      <script
-        async
-        defer
-        crossorigin="anonymous"
-        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=207395400191664&autoLogAppEvents=1"
-        nonce="YBpv6AFg"
-      ></script>
-      <HeroStyled>
-        <div className="bg-video">
-          {/* <video className="bg-video__content" autoPlay muted loop>
+    <>
+      <SEO title={"Aladinko"} />
+      <HomeStyled>
+        <div id="fb-root"></div>
+        <script
+          async
+          defer
+          crossorigin="anonymous"
+          src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=207395400191664&autoLogAppEvents=1"
+          nonce="YBpv6AFg"
+        ></script>
+        <HeroStyled>
+          <div className="bg-video">
+            {/* <video className="bg-video__content" autoPlay muted loop>
             <source src="/video3.mp4" type="video/mp4" />
             {/* <source src="img/video.webm" type="video/webm" /> */}
-          {/* Your browser is not supported! */}
-          {/* </video>  */}
-          {/* <img src="images/" /> */}
-        </div>
+            {/* Your browser is not supported! */}
+            {/* </video>  */}
+            {/* <img src="images/" /> */}
+          </div>
 
-        <AutoplaySlider
-          // animation="cubeAnimation"
-          className="bg-video"
-          interval={10000}
-          play={true}
-          cancelOnInteraction={false}
-        >
-          <div data-src="baby-dog.jpg" />
-          <div data-src="quote.jpg" />
-        </AutoplaySlider>
-        {/* <SimpleImageSlider width={896} height={504} images={images} /> */}
-        <div className="left-panel">
-          {/* <h3>Mehanično pranje preprog</h3> */}
-          <h1>Čiste preproge</h1>
-          <h1>Profesionalna storitev</h1>
-          <h1>Poštena cena</h1>
-          {/* <h3>Promotivni 2€ po &#13217;</h3> */}
-          {/* <Button className="hero__button" variant="contained" color="primary">
+          <AutoplaySlider
+            // animation="cubeAnimation"
+            className="bg-video"
+            interval={10000}
+            play={true}
+            cancelOnInteraction={false}
+          >
+            <div data-src="baby-dog.jpg" />
+            <div data-src="quote.jpg" />
+          </AutoplaySlider>
+          {/* <SimpleImageSlider width={896} height={504} images={images} /> */}
+          <div className="left-panel">
+            {/* <h3>Mehanično pranje preprog</h3> */}
+            <h1>Čiste preproge</h1>
+            <h1>Profesionalna storitev</h1>
+            <h1>Poštena cena</h1>
+            {/* <h3>Promotivni 2€ po &#13217;</h3> */}
+            {/* <Button className="hero__button" variant="contained" color="primary">
             Preberi več
           </Button> */}
-        </div>
+          </div>
 
-        <div className="hero__promotion-price">
-          <h2 className="hero__promotion-price__regular-price">
-            6€ po &#13217;
-          </h2>
-          <h2 className="hero__promotion-price__title">
-            PROMOCIJSKA CENA OD <br />
-            <span>3€</span> po &#13217;
-          </h2>
-          <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
-        </div>
-      </HeroStyled>
+          <div className="hero__promotion-price">
+            <h2 className="hero__promotion-price__regular-price">
+              6€ po &#13217;
+            </h2>
+            <h2 className="hero__promotion-price__title">
+              PROMOCIJSKA CENA OD <br />
+              <span>3€</span> po &#13217;
+            </h2>
+            <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
+          </div>
+        </HeroStyled>
 
-      <section className="video">
-        <div className="promo-video">
-          <h2>Poglejte si naš proces pranja</h2>
-          <ReactPlayer
-            url="https://youtu.be/TiZB6gRWTWc"
-            // url=""
-            width="100%"
-            controls
-            // playing
-          />
-        </div>
-        <article className="video__description">
-          <h2>Zagotovitev 100% kakovost</h2>
-          <p>
-            Kot je razvidno iz posnetka, vaš preprog gre cež 6 različih korakov,
-            da bi zagotovili čiste preproge. Stroje ki jih mi uporabljamo so se
-            uporabljajo v vseh profesionalnih pralnic preproge.
-          </p>
-          <br />
-          <p>
-            Mi smo edini v Mariboru ki uporabljajo takšen tip stroje, v procesu
-            pranja preproge. Podrobnejši opis vsak korak v našem procesu najdete
-            {/* <Link href="/#cleaning-process"> */}
-            <a onClick={() => scrollToElement("cleaning-process")}>tukaj.</a>
-            {/* </Link> */}
-          </p>
-        </article>
-      </section>
-      <Services />
-    </HomeStyled>
+        <section className="video">
+          <div className="promo-video">
+            <h2>Poglejte si naš proces pranja</h2>
+            <ReactPlayer
+              url="https://youtu.be/TiZB6gRWTWc"
+              // url=""
+              width="100%"
+              controls
+              // playing
+            />
+          </div>
+          <article className="video__description">
+            <h2>Zagotovitev 100% kakovost</h2>
+            <p>
+              Kot je razvidno iz posnetka, vaš preprog gre cež 6 različih
+              korakov, da bi zagotovili čiste preproge. Stroje ki jih mi
+              uporabljamo so se uporabljajo v vseh profesionalnih pralnic
+              preproge.
+            </p>
+            <br />
+            <p>
+              Mi smo edini v Mariboru ki uporabljajo takšen tip stroje, v
+              procesu pranja preproge. Podrobnejši opis vsak korak v našem
+              procesu najdete
+              {/* <Link href="/#cleaning-process"> */}
+              <a onClick={() => scrollToElement("cleaning-process")}>tukaj.</a>
+              {/* </Link> */}
+            </p>
+          </article>
+        </section>
+        <Services />
+      </HomeStyled>
+    </>
   );
   // return <h1> dame</h1>;
 }

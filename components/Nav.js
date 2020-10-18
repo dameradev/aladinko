@@ -7,7 +7,7 @@ const scrollToElement = (id, handleDrawerClose) => {
   window.scrollTo({
     top: element.getBoundingClientRect().top + window.scrollY - 100,
   });
-  handleDrawerClose(true);
+  handleDrawerClose && handleDrawerClose(true);
   console.log(handleDrawerClose);
 };
 const Nav = (props) => {

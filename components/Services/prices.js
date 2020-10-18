@@ -36,6 +36,9 @@ const TableStyled = styled.div`
     background: #eee;
   }
 
+  tr {
+    border-bottom: 1px solid black;
+  }
   th,
   td {
     font-weight: unset;
@@ -43,15 +46,20 @@ const TableStyled = styled.div`
   }
 
   .column100 {
-    width: 10rem;
-    padding-left: 25px;
+    max-width: 5rem;
+    /* padding-left: 25px; */
+    word-break: break-word;
+    text-align: center;
   }
 
   .column100.column1 {
-    width: 265px;
+    max-width: 8rem;
     padding-left: 2rem;
   }
 
+  .row100 {
+    border-bottom: 2px solid black;
+  }
   .row100.head th {
     padding-top: 24px;
     padding-bottom: 20px;
@@ -136,13 +144,13 @@ const Prices = () => {
               <thead>
                 <tr class="row100 head">
                   {/* <th class="column100 column1" data-column="column1"></th> */}
-                  <th class="column100 column2" data-column="column2">
+                  <th class="column100 column1" data-column="column2">
                     Storitev
                   </th>
-                  <th class="column100 column3" data-column="column3">
+                  <th class="column100 column2" data-column="column3">
                     Meritev
                   </th>
-                  <th class="column100 column4" data-column="column4">
+                  <th class="column100 column3" data-column="column4">
                     Cena
                   </th>
                   {/* <th class="column100 column5" data-column="column5">
@@ -186,7 +194,7 @@ const Prices = () => {
 
                 <tr class="row100">
                   <td class="column100 column1" data-column="column1">
-                    Orientalska/Perzijska
+                    Orientalska - Perzijska
                   </td>
                   <td class="column100 column2" data-column="column2">
                     &#13217;
