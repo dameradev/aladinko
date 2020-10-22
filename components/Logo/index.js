@@ -16,6 +16,8 @@ const LogoStyled = styled.p`
     /* } */
     img {
       width: 100%;
+      width: 10rem;
+      height: 8rem;
     }
   }
 `;
@@ -25,7 +27,7 @@ const Logo = (props) => {
     <LogoStyled>
       <Link href="/">
         <a className={`${props.className} logo`}>
-          <img src="aladinko.png" />
+          <img src="aladinko.png" rel="dns-prefetch" />
         </a>
       </Link>
     </LogoStyled>
