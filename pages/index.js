@@ -88,8 +88,14 @@ const HomeStyled = styled.main`
 `;
 
 const images = [
-  { url: "baby-dog.jpg" },
-  { url: "quote.jpg" },
+  {
+    url:
+      "https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1032/v1603370638/ab33wbxzwxcenzee00pi.jp2",
+  },
+  {
+    url:
+      "https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1040/v1603370639/rpy2hzrfevagnf6ka7vz.jp2",
+  },
   // { url: "man-cleaining.jpg" },
 ];
 

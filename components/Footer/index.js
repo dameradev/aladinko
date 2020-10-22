@@ -198,7 +198,11 @@ const Footer = () => {
           </p>
 
           <i>
-            <a href="https://www.facebook.com/aladinkopreproge" target="_blank">
+            <a
+              href="https://www.facebook.com/aladinkopreproge"
+              target="_blank"
+              rel="noreferrer"
+            >
               {Icons.Facebook}
             </a>
           </i>

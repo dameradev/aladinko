@@ -27,7 +27,10 @@ const Logo = (props) => {
     <LogoStyled>
       <Link href="/">
         <a className={`${props.className} logo`}>
-          <img src="aladinko.png" rel="dns-prefetch" />
+          <img
+            src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_426/v1603370741/vijhgztlhjje4aj8ryow.jp2"
+            rel="dns-prefetch"
+          />
         </a>
       </Link>
     </LogoStyled>
