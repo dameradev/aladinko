@@ -20,6 +20,7 @@
     "react": "16.13.1",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.14.0",
+    "react-facebook": "^8.1.4",
     "react-helmet": "^6.1.0",
     "react-player": "^2.6.2",
     "serverless-next.js": "^1.13.0",

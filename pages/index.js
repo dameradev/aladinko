@@ -11,8 +11,11 @@ import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import ReactPlayer from "react-player";
 
+import { FacebookProvider, Comments } from "react-facebook";
+
 import Services from "../components/Services";
 import SEO from "../components/SEO";
+import useFacebook from "../utils/useFacebook";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -20,6 +23,11 @@ const HomeStyled = styled.main`
   /* color: blue; */
   /* grid-column: full-start / full-end; */
 
+  .fb-comment-embed {
+    /* background: blue;
+    opacity: 0.5; */
+    height: 200px;
+  }
   width: 100%;
   .video {
     display: grid;
@@ -83,18 +91,43 @@ const scrollToElement = (id) => {
 };
 
 export default function Home() {
+  // useEffe;
+  // const facebook = useFacebook();
+  // console.log(facebook);
+  const loadFbLoginApi = () => {
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: 207395400191664,
+        cookie: true, // enable cookies to allow the server to access
+        // the session
+        xfbml: true, // parse social plugins on this page
+        version: "v2.5", // use version 2.1
+      });
+    };
+
+    console.log("Loading fb api");
+    // Load the SDK asynchronously
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  };
+  useEffect(() => {
+    loadFbLoginApi();
+    window.FB.XFBML.parse();
+  }, []);
+
   return (
     <>
       <SEO title={"Aladinko"} />
       <HomeStyled>
         <div id="fb-root"></div>
-        <script
-          async
-          defer
-          crossorigin="anonymous"
-          src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=207395400191664&autoLogAppEvents=1"
-          nonce="YBpv6AFg"
-        ></script>
+
         <HeroStyled>
           <div className="bg-video">
             {/* <video className="bg-video__content" autoPlay muted loop>
@@ -170,6 +203,41 @@ export default function Home() {
           </article>
         </section>
         <Services />
+        <section>
+          <FacebookProvider appId="207395400191664">
+            <div
+              className="fb-comment-embed"
+              data-href="https://www.facebook.com/aladinkopreproge/posts/122760006250971?comment_id=124222499438055"
+              data-width="500"
+            ></div>
+
+            {/* <Comments /> */}
+          </FacebookProvider>
+          {/* <div
+            class="fb-comment-embed"
+            data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185"
+            data-width="500"
+          ></div> */}
+
+          {/* <div
+            class="fb-page"
+            data-href="https://www.facebook.com/aladinkopreproge"
+            data-tabs="timeline"
+            data-width=""
+            data-height=""
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/aladinkopreproge"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/aladinkopreproge">Aladinko</a>
+            </blockquote>
+          </div> */}
+        </section>
       </HomeStyled>
     </>
   );
