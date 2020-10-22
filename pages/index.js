@@ -1,4 +1,4 @@
-import { useEffect } from "react"; // import Head from 'next/head'
+import { useEffect, useState } from "react"; // import Head from 'next/head'
 import Link from "next/link";
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
@@ -23,8 +23,18 @@ const HomeStyled = styled.main`
   /* color: blue; */
   /* grid-column: full-start / full-end; */
 
-  .fb-comment-embed {
+  .testimonials {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 500px; */
+  }
+
+  .comment-container {
     /* background: blue;
+    ba
     opacity: 0.5; */
     height: 200px;
   }
@@ -83,17 +93,24 @@ const images = [
   // { url: "man-cleaining.jpg" },
 ];
 
+const commentIds = [
+  "124222499438055",
+  "122917736235198",
+  "122883026238669",
+  "122871602906478",
+  "122780256248946",
+];
+
 const scrollToElement = (id) => {
   const element = document.getElementById(id);
   window.scrollTo({
     top: element.getBoundingClientRect().top + window.scrollY - 100,
   });
 };
-
+let commentIndex = 0;
 export default function Home() {
-  // useEffe;
-  // const facebook = useFacebook();
-  // console.log(facebook);
+  const [comment, setComment] = useState("124222499438055");
+
   const loadFbLoginApi = () => {
     window.fbAsyncInit = function () {
       FB.init({
@@ -117,10 +134,29 @@ export default function Home() {
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   };
+
   useEffect(() => {
     loadFbLoginApi();
     window.FB.XFBML.parse();
-  }, []);
+
+    const interval = setInterval(() => {
+      commentIds.forEach((commentId, index) => {
+        if (commentId === comment) {
+          commentIndex = index;
+        }
+      });
+
+      if (commentIds.length - 1 > commentIndex) {
+        setComment(commentIds[commentIndex + 1]);
+      } else {
+        setComment(commentIds[0]);
+      }
+
+      window.FB.XFBML.parse();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  });
 
   return (
     <>
@@ -203,40 +239,19 @@ export default function Home() {
           </article>
         </section>
         <Services />
-        <section>
-          <FacebookProvider appId="207395400191664">
-            <div
-              className="fb-comment-embed"
-              data-href="https://www.facebook.com/aladinkopreproge/posts/122760006250971?comment_id=124222499438055"
-              data-width="500"
-            ></div>
-
-            {/* <Comments /> */}
-          </FacebookProvider>
-          {/* <div
-            class="fb-comment-embed"
-            data-href="https://www.facebook.com/zuck/posts/10102735452532991?comment_id=1070233703036185"
-            data-width="500"
-          ></div> */}
-
-          {/* <div
-            class="fb-page"
-            data-href="https://www.facebook.com/aladinkopreproge"
-            data-tabs="timeline"
-            data-width=""
-            data-height=""
-            data-small-header="false"
-            data-adapt-container-width="true"
-            data-hide-cover="false"
-            data-show-facepile="true"
-          >
-            <blockquote
-              cite="https://www.facebook.com/aladinkopreproge"
-              class="fb-xfbml-parse-ignore"
-            >
-              <a href="https://www.facebook.com/aladinkopreproge">Aladinko</a>
-            </blockquote>
-          </div> */}
+        <section className="testimonials">
+          <h2 className="title">Komentare zadovolnjih strank</h2>
+          {/* {commentIds.map((id) => ( */}
+          {comment && (
+            <div className="comment-container">
+              <div
+                className="fb-comment-embed"
+                data-href={`https://www.facebook.com/aladinkopreproge/posts/122760006250971?comment_id=${comment}`}
+                data-width="500"
+              ></div>
+            </div>
+          )}
+          {/* ))} */}
         </section>
       </HomeStyled>
     </>

@@ -156,6 +156,14 @@ const GlobalStyle = createGlobalStyle`
     grid-column: full-start /full-end;
   }
 
+  .title {
+      padding-bottom: 2rem;
+      font-size: 3.4rem;
+      font-weight: 400;
+      text-align: center;
+  }
+`;
+
 // `;
 
 // // injectGlobal`
