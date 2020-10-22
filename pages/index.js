@@ -143,7 +143,7 @@ export default function Home() {
 
   useEffect(() => {
     loadFbLoginApi();
-    window.FB.XFBML.parse();
+    if (window.FB) window.FB.XFBML.parse();
 
     const interval = setInterval(() => {
       commentIds.forEach((commentId, index) => {
