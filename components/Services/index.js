@@ -340,20 +340,20 @@ const Services = () => {
         <div className="left-hero">
           <h2>Zakaj izbrati Aladinko?</h2>
           <p>
-            Praonica Aladinko d.o.o je profesionalno opremljena praonica tepiha
-            u Mariboru, a po svojoj veličini i profesionalnom pristupu može
-            udvoljiti svim vašim zahtjevima za:
+            Čistilnica Aladinko d.o.o je profesionalno za pranje preproge v
+            Mariboru, po svoji velikosti in profesionalnem pristop pa lahko
+            izpolnjujejo vse vaše zahteve za:
             <ul className="left-hero__benefits-list">
               <li>
-                Pranje i čišćenje tepiha koristeći najmodernije tehnologije
-                pranja.
+                Pranje in čiščenje preprog z uporabo najsodobnejših tehnologij
+                pranje.
               </li>
               {/* <li>Brezplačni prevzem ter dostava v roku 48ur.</li> */}
               <li>
                 Najcenejši storitve v Mariboru, ker je celotni proces pranje
                 avtomatiziran.
               </li>
-              <li>Vrhunsko pranje tepiha sa dugom dlakom</li>
+              <li>Vrhunsko pranje preprog z dolgimi lasmi</li>
               <li>
                 Pakiranje preproge v zaščitnu foliju. 100% suvi prijatnog
                 mirisa.
@@ -385,9 +385,7 @@ const Services = () => {
               <li>
                 <span> Izboljšajte </span> kakovost zraka v zaprtih prostorih
               </li>
-              {/* <li>
-                <span>Reduce</span> staff sick time
-              </li> */}
+
               <li>
                 <span> Prihranite </span> denar
               </li>
