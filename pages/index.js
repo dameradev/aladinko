@@ -90,14 +90,18 @@ const HomeStyled = styled.main`
 const images = [
   {
     url:
-      "https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1032/v1603370638/ab33wbxzwxcenzee00pi.jp2",
+      "https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1089/v1603370639/rpy2hzrfevagnf6ka7vz.jpg",
+    alt: "čiste preproge",
   },
   {
     url:
-      "https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1040/v1603370639/rpy2hzrfevagnf6ka7vz.jp2",
+      "https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1089/v1603370638/ab33wbxzwxcenzee00pi.jpg",
+    alt: "preprog pes",
   },
   // { url: "man-cleaining.jpg" },
 ];
+{
+}
 
 const commentIds = [
   "124222499438055",
@@ -187,8 +191,10 @@ export default function Home() {
             play={true}
             cancelOnInteraction={false}
           >
-            <div data-src="baby-dog.jpg" />
-            <div data-src="quote.jpg" />
+            {images.map((image) => (
+              <div data-src={image.url} alt={image.alt} />
+            ))}
+            {/* <div data-src="https://res.cloudinary.com/dvvbls283/image/upload/c_scale,w_1089/v1603370639/rpy2hzrfevagnf6ka7vz.jpg" /> */}
           </AutoplaySlider>
           {/* <SimpleImageSlider width={896} height={504} images={images} /> */}
           <div className="left-panel">
