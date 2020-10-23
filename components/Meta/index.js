@@ -13,7 +13,7 @@ const Meta = (props) => {
         rel="dns-prefetch"
       ></link>
 
-      <title>Aladin</title>
+      <title>Aladinko</title>
     </Head>
   );
 };
