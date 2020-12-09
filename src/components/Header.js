@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "./Logo";
 import respondTo from "../utils/respondTo";
+import scrollToElement from "../utils/scrollToElement";
 
 // const NavStyles = styled.nav`
 //   /* margin-bottom: 3rem; */
@@ -162,14 +163,6 @@ export const HeaderStyled = styled.header`
 `;
 
 export default function Nav() {
-  const scrollToElement = (id, handleDrawerClose) => {
-    const element = document.getElementById(id);
-    window.scrollTo({
-      top: element.getBoundingClientRect().top + window.scrollY - 100,
-    });
-    handleDrawerClose && handleDrawerClose(true);
-    console.log(handleDrawerClose);
-  };
   return (
     <HeaderStyled>
       <div className={`header-section `}>

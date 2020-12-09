@@ -50,24 +50,21 @@ const ServicesStyled = styled.div`
     }
     p {
       font-size: 2rem;
+      ${respondTo.laptopSmall`
+        font-size: 1.8rem;
+      `}
       ${respondTo.tablet`
         font-size: 1.6rem;
       `}
     }
     &__benefits-list {
       list-style: square;
-      /* inside; */
-      /* 
-      li {
-        &::marker {
-          width: 2px;
-          font-size: 0.2rem;
-          height: 2px;
-        }
-      } */
-      /* font-size: 10px; */
-      /* list-style: none; */
       padding: 2rem;
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 
@@ -298,8 +295,7 @@ const Services = () => {
               </li>
               <li>Vrhunsko pranje preprog z dolgimi lasmi</li>
               <li>
-                Pakiranje preproge v zaščitnu foliju. 100% suvi prijatnog
-                mirisa.
+                Pakiranje preproge v zaščitnu foliju. 100% suhi z prijeten vonj.
               </li>
               <li>
                 Zapleten postopek, ki je sestavljen iz 7 različnih korakov za

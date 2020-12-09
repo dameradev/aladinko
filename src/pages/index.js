@@ -12,6 +12,7 @@ import Image from "../components/Image";
 
 // import { HeroStyles, SectionStyles } from "../styles/HomePage";
 import respondTo from "../utils/respondTo";
+import scrollToElement from "../utils/scrollToElement";
 
 const HomeStyled = styled.main`
   /* color: blue; */
@@ -72,6 +73,7 @@ const HomeStyled = styled.main`
           padding-left: 0.8rem;
           font-size: 2.2rem;
           color: var(--primary);
+          cursor: pointer;
         }
       }
     }
@@ -323,8 +325,7 @@ const HomePage = () => {
             <p>
               Kot je razvidno iz posnetka, vaš preprog gre cež 6 različih
               korakov, da bi zagotovili čiste preproge. Stroje ki jih mi
-              uporabljamo so se uporabljajo v vseh profesionalnih pralnic
-              preproge.
+              uporabljamo se uporabljajo v vseh profesionalnih pralnic preproge.
             </p>
             <br />
             <p>
@@ -332,7 +333,12 @@ const HomePage = () => {
               procesu pranja preproge. Podrobnejši opis vsak korak v našem
               procesu najdete
               {/* <Link href="/#cleaning-process"> */}
-              <a onClick={() => scrollToElement("cleaning-process")}>tukaj.</a>
+              <a
+                className="video__description-link"
+                onClick={() => scrollToElement("cleaning-process")}
+              >
+                tukaj.
+              </a>
               {/* </Link> */}
             </p>
           </article>
