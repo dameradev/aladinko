@@ -97,7 +97,7 @@ const HeroStyled = styled.div`
 
   ${respondTo.tabletMini` 
       
-      height: 60vh;
+      height: 80vh;
     `}
 
   color: #fff;

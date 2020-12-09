@@ -137,69 +137,69 @@ const Prices = () => {
         na m<sup>2</sup>, ostale preproge pa so z promocijski ceni od 5€ na m
         <sup>2</sup>
       </p>
-      <div class="container-table100">
-        <div class="wrap-table100">
-          <div class="table100 ver1 m-b-110">
+      <div className="container-table100">
+        <div className="wrap-table100">
+          <div className="table100 ver1 m-b-110">
             <table data-vertable="ver1">
               <thead>
-                <tr class="row100 head">
-                  {/* <th class="column100 column1" data-column="column1"></th> */}
-                  <th class="column100 column1" data-column="column2">
+                <tr className="row100 head">
+                  {/* <th className="column100 column1" data-column="column1"></th> */}
+                  <th className="column100 column1" data-column="column2">
                     Storitev
                   </th>
-                  <th class="column100 column2" data-column="column3">
+                  <th className="column100 column2" data-column="column3">
                     Meritev
                   </th>
-                  <th class="column100 column3" data-column="column4">
+                  <th className="column100 column3" data-column="column4">
                     Cena
                   </th>
-                  {/* <th class="column100 column5" data-column="column5">
+                  {/* <th className="column100 column5" data-column="column5">
                     Wednesday
                   </th>
-                  <th class="column100 column6" data-column="column6">
+                  <th className="column100 column6" data-column="column6">
                     Thursday
                   </th>
-                  <th class="column100 column7" data-column="column7">
+                  <th className="column100 column7" data-column="column7">
                     Friday
                   </th>
-                  <th class="column100 column8" data-column="column8">
+                  <th className="column100 column8" data-column="column8">
                     Saturday
                   </th> */}
                 </tr>
               </thead>
               <tbody>
-                <tr class="row100">
-                  <td class="column100 column1" data-column="column1">
+                <tr className="row100">
+                  <td className="column100 column1" data-column="column1">
                     Tanke preproge
                   </td>
-                  <td class="column100 column2" data-column="column2">
+                  <td className="column100 column2" data-column="column2">
                     &#13217;
                   </td>
-                  <td class="column100 column3" data-column="column3">
+                  <td className="column100 column3" data-column="column3">
                     6 €
                   </td>
                 </tr>
 
-                <tr class="row100">
-                  <td class="column100 column1" data-column="column1">
+                <tr className="row100">
+                  <td className="column100 column1" data-column="column1">
                     Volnena, shaggy, močneje umazana
                   </td>
-                  <td class="column100 column2" data-column="column2">
+                  <td className="column100 column2" data-column="column2">
                     &#13217;
                   </td>
-                  <td class="column100 column3" data-column="column3">
+                  <td className="column100 column3" data-column="column3">
                     9 €
                   </td>
                 </tr>
 
-                <tr class="row100">
-                  <td class="column100 column1" data-column="column1">
+                <tr className="row100">
+                  <td className="column100 column1" data-column="column1">
                     Orientalska - Perzijska
                   </td>
-                  <td class="column100 column2" data-column="column2">
+                  <td className="column100 column2" data-column="column2">
                     &#13217;
                   </td>
-                  <td class="column100 column3" data-column="column3">
+                  <td className="column100 column3" data-column="column3">
                     12 €
                   </td>
                 </tr>

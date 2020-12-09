@@ -40,7 +40,7 @@ const Slideshow = ({ slidesCaptions }) => {
         transition={4} // transition duration between images
         duration={8} // how long an image is shown
         // specify images to include (and their order) according to `relativePath`
-        images={["dusting.png", "washing.png", "man-carpet.jpg"]}
+        images={["washing.jpg", "man-carpet.jpg", "dusting.jpg"]}
       >
         {/* Captions in sync with background images*/}
         {/* {slidesCaptions.map((caption) => (
