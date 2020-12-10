@@ -2,11 +2,11 @@ const path = require("path");
 module.exports = {
   // pathPrefix: "",
   siteMetadata: {
-    title: `Damjan Radev`,
-    siteUrl: "https://radevcoding.com",
+    title: `Aladinko Preproge`,
+    siteUrl: "https://aladinko.si",
     description:
-      "Highly experienced developer in creating blazing fast SEO friendly websites with custom backend/cms",
-    twitter: "@dameradev",
+      "Profesionalna opremljena čistilnica za globinsko pranje preproge v Mariboru.",
+    facebook: "@aladinkopreproge",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
