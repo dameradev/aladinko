@@ -9,7 +9,7 @@ In this way, I made sure the client has to pay the minimal amount (only hosting)
 
 Initially I was using nextJS for this project, because I hadn't yet learned about GatsbyJS. 
 
-After learning about gatsby, I realised that this project is perfect for it, switiching to gatsby has improved performance (loading speed), an SEO by a ton. 
+After learning about gatsby, I realised that this project is perfect for it, switiching to gatsby has improved performance (loading speed), and SEO by a ton. 
 
 &nbsp;
 &nbsp;
