@@ -311,7 +311,7 @@ const Services = () => {
 
         <div className="right-hero">
           <div className="right-hero__image-container">
-            <Image src="washing.png" />
+            <Image src="washing.png" alt="Stroj za pranje preproge" />
             <div className="right-hero__list">
               <h3>V čem je vaša korist?</h3>
 
@@ -385,12 +385,12 @@ const Services = () => {
         </h2>
 
         <div className="cleaning-process__item">
-          <Image src="delivery.png" />
+          <Image src="delivery.png" alt="Prevzem in dostavo preproge" />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               1. Prevzem in vrednotenje
-            </h4>
+            </h3>
             <p>
               Za vsa naročila nad 6m2 na območju maribor, pridemo mi iskat. Po
               prejemu preproge osebje pralnice oceni stopnjo umazanosti in
@@ -399,11 +399,11 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <Image src="carpet-photo.png" />
+          <Image src="carpet-photo.png" alt="Slikanje preproge s poškodami" />
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               2. Slikanje tepiha ( sa oštećenjima i izlivenim bojama )
-            </h4>
+            </h3>
             <p>
               Pred kakršnim koli dejanjem se preproge s poškodbami fotografirajo
               in arhivirajo v odjemalski bazi podatkov.
@@ -414,9 +414,9 @@ const Services = () => {
           <img src="https://res.cloudinary.com/dvvbls283/image/upload/v1600947575/t6kc9ygwts6zesleiojh.jpg" />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               2. Merenje Dimenzija (m<sup>2</sup>)
-            </h4>
+            </h3>
             <p>
               Pre bilo koje radnje, tepisi sa oštećenjima se slikaju i
               arhiviraju u bazu klijenata. Pre bilo koje radnje, tepisi sa
@@ -425,13 +425,13 @@ const Services = () => {
           </div>
         </div> */}
         <div className="cleaning-process__item">
-          <Image src="dusting.png" />
+          <Image src="dusting.png" alt="Tresenje preproge v posebnem stroju" />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               3. Tresenje preprog v posebnem stroju, ki odstrani 80%
               prahu/umazanje.
-            </h4>
+            </h3>
             <p>
               Prvi korak pri globinskem čiščenju preprog je strojno
               odstranjevanje vsa groba umazanija, prah in las s suhe preproge za
@@ -440,12 +440,15 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <Image src="washing.png" />
+          <Image
+            src="washing.png"
+            alt="Profesionalen stroj za pranje preproge"
+          />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               4. Pranje preprog v avtomatskem pralnem stroju za preproge.
-            </h4>
+            </h3>
             <p>
               Preproga je namočena v vodi za boljše razkrojevanje nečistoč in
               pripravo za pranje so madeži obdelani z ustreznimi sredstvi in
@@ -455,12 +458,12 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <Image src="centrifuge.png" />
+          <Image src="centrifuge.png" alt="Ožemanje preproge v centrifugi" />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               5. Ožemanje preprog v centrifuge.
-            </h4>
+            </h3>
             <p>
               Izpiranje preprog je strogo nadzorovan postopek, ki spremlja
               čistočo voda, ki prihaja iz stroja. Ko je voda čista, se dotok
@@ -471,12 +474,12 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <Image src="drying.png" />
+          <Image src="drying.png" alt="Sušenje preprog v komorah" />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               6. Sušenje u komorama
-            </h4>
+            </h3>
             <p>
               V sušilni komori preproge sušimo pri optimalni temperaturi z
               strojno razvlaževanje. Preproga se posuši v nekaj ure, hkrati pa
@@ -486,12 +489,15 @@ const Services = () => {
           </div>
         </div>
         <div className="cleaning-process__item">
-          <Image src="vacuming.png" />
+          <Image
+            src="vacuming.png"
+            alt="Sesanje, krtačenje in pakiranje preproge"
+          />
 
           <div>
-            <h4 className="cleaning-process__item-title">
+            <h3 className="cleaning-process__item-title">
               7. Končno krtačenje, sesanje, pakiranje in dostava preprog.
-            </h4>
+            </h3>
             <p>
               Suha preproga je še enkrat posesana, kar odpravi kakršno koli
               ostanki prahu in umazanije. Oprane in posušene preproge so zavite

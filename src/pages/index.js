@@ -304,7 +304,11 @@ const HomePage = () => {
               PROMOCIJSKA CENA OD <br />
               <span>3€</span> po &#13217;
             </h2>
-            <img className="discount-icon" src={Discount} />
+            <img
+              className="discount-icon"
+              src={Discount}
+              alt="Akcija pranje preproge"
+            />
             <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
           </div>
         </HeroStyled>
