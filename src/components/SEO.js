@@ -39,8 +39,6 @@ export default function SEO({ children, location, description, title, image }) {
       />
       <meta property="og:description" content={description} key="ogdesc" />
       {children}
-
-      {children}
     </Helmet>
   );
 }
