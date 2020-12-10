@@ -18,3 +18,6 @@ After learning about gatsby, I realised that this project is perfect for it, swi
 **Here are the results**
 
 ![Lighthouse testing results](testing-aladinko.png)
+
+
+DEMO -> https://aladinko.si/
