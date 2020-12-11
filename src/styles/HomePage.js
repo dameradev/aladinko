@@ -12,7 +12,7 @@ export const HeroStyled = styled.div`
   color: #fff;
 
   ${respondTo.tabletMini` 
-        height: 60vh;
+        height: 80vh;
   `}
 
   ${respondTo.tablet` 
