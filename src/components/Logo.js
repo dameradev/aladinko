@@ -6,8 +6,8 @@ import logo from "../assets/images/logo.svg";
 const LogoStyles = styled.div`
   padding: 1.5rem 0;
   img {
-    height: 5rem;
-    width: 5rem;
+    height: 7rem;
+    width: 7rem;
   }
 `;
 
