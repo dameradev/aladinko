@@ -50,12 +50,6 @@ const ServicesStyled = styled.div`
     }
     p {
       font-size: 1.8rem;
-      ${respondTo.laptopSmall`
-        font-size: 1.8rem;
-      `}
-      ${respondTo.tablet`
-        font-size: 1.6rem;
-      `}
     }
     &__benefits-list {
       list-style: square;
@@ -73,6 +67,11 @@ const ServicesStyled = styled.div`
     ${respondTo.tabletMini` 
       width: 100%;
     `}
+    &__image-container {
+      ${respondTo.tabletMini`
+        display: none;
+      `}
+    }
     &__list {
       padding: 2rem;
       display: none;
@@ -80,7 +79,7 @@ const ServicesStyled = styled.div`
           display: block;
       `}
       ${respondTo.tabletMini` 
-          text-align: center;
+          display:none;
       `}
       ul {
         li {
@@ -162,7 +161,7 @@ const ServicesStyled = styled.div`
       button {
         padding: 2rem 2.5rem;
         border: 2px solid var(--primary);
-        font-size: 2rem;
+        font-size: 1.8rem;
         background: none;
         border-radius: 35px;
         text-transform: uppercase;
@@ -239,11 +238,11 @@ const ServicesStyled = styled.div`
         display: flex;
       } */
       &-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 3.2rem;
         color: var(--primary);
         text-transform: uppercase;
-        word-break: break-all;
+        word-break: break-word;
 
         ${respondTo.mobilePortrait`
           font-size: 1.8rem;
@@ -270,7 +269,7 @@ const ServicesStyled = styled.div`
   .warning-message {
     grid-column: 1/3;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     color: var(--primary);
   }
@@ -580,7 +579,7 @@ const Services = () => {
           </div>
         </div>
         <p className="warning-message">
-          Opmonik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
+          Opomnik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
           20€ v občini Maribor in Starše. Izven Maribor je potreben predhoden
           dogovor.
         </p>

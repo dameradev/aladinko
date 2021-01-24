@@ -74,7 +74,7 @@ export const Container = styled.div`
     display: flex;
     li {
       line-height: 4rem;
-      font-size: 2rem;
+      font-size: 1.8rem;
       &:not(:last-of-type) {
         padding: 0 2rem;
       }
@@ -88,7 +88,7 @@ export const Container = styled.div`
 export const MenuLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 
   @media (max-width: ${breakpoints.s}px) {

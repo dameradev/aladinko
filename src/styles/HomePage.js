@@ -11,6 +11,11 @@ export const HeroStyled = styled.div`
 
   color: #fff;
 
+  .opening-again {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
   ${respondTo.tabletMini` 
         height: 80vh;
   `}

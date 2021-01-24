@@ -99,11 +99,12 @@ const HomePage = () => {
             />
             <p className="hero__promotion-price-notice">Velja do 01.03.2021</p>
           </div>
+          <h2 className="opening-again">Pononvno odpiramo 01.02.2021</h2>
         </HeroStyled>
 
         <section className="main-desc">
           <p>
-            Pralnica Aludinko ponuja profesionalno storitev pranja preprog v
+            Pralnica Aladinko ponuja profesionalno storitev pranja preprog v
             Mariboru in s svojim pristopom zagotovlja vrhunsko pranje vaših
             preprog.
           </p>

@@ -62,7 +62,7 @@ const FooterStyled = styled.footer`
 
   h3 {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .right-info {
@@ -111,7 +111,7 @@ const FooterStyled = styled.footer`
       display: flex;
 
       li {
-        font-size: 2rem;
+        font-size: 1.8rem;
 
         &:not(:last-of-type) {
           padding-right: 2rem;

@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    font-size: 2rem;
+    font-size: 1.8rem;
     box-sizing: border-box;
     background: #fff;
    

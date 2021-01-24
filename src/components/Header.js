@@ -71,7 +71,7 @@ export const HeaderStyled = styled.header`
       position: absolute;
       top: -2.5rem;
       right: 0;
-      font-size: 2rem;
+      font-size: 1.8rem;
 
       transition: all 0.5s;
       svg {

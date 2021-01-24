@@ -12,7 +12,7 @@ const NavStyles = styled.nav`
       `}
   }
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.8rem;
 
   display: flex;
   align-items: center;
