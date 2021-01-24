@@ -90,17 +90,29 @@ const HomePage = () => {
             </h2>
             <h2 className="hero__promotion-price__title">
               PROMOCIJSKA CENA OD <br />
-              <span>3€</span> po &#13217;
+              <span>4€</span> po &#13217;
             </h2>
             <img
               className="discount-icon"
               src={Discount}
               alt="Akcija pranje preproge"
             />
-            <p className="hero__promotion-price-notice">Velja do 15.10.2020</p>
+            <p className="hero__promotion-price-notice">Velja do 01.03.2021</p>
           </div>
         </HeroStyled>
 
+        <section className="main-desc">
+          <p>
+            Pralnica Aludinko ponuja profesionalno storitev pranja preprog v
+            Mariboru in s svojim pristopom zagotovlja vrhunsko pranje vaših
+            preprog.
+          </p>
+          <p>
+            Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko
+            preprečite pojav nekaterih alergij in zmanjšate prisotnost
+            škodljivih bakterij, virusov v vaših domovih.
+          </p>
+        </section>
         <section className="video">
           <div className="promo-video">
             <h2>Poglejte si naš proces pranja</h2>
@@ -112,28 +124,33 @@ const HomePage = () => {
               // playing
             />
           </div>
-          <article className="video__description">
-            <h2>Zagotovitev 100% kakovost</h2>
-            <p>
-              Kot je razvidno iz posnetka, vaš preprog gre cež 6 različih
-              korakov, da bi zagotovili čiste preproge. Stroje ki jih mi
-              uporabljamo se uporabljajo v vseh profesionalnih pralnic preproge.
-            </p>
-            <br />
-            <p>
-              Mi smo edini v Mariboru ki uporabljajo takšen tip stroje, v
-              procesu pranja preproge. Podrobnejši opis vsak korak v našem
-              procesu najdete
-              {/* <Link href="/#cleaning-process"> */}
-              <a
-                className="video__description-link"
-                onClick={() => scrollToElement("cleaning-process")}
-              >
-                tukaj.
-              </a>
-              {/* </Link> */}
-            </p>
-          </article>
+
+          {/* <article>
+            <h1></h1>
+          </article> */}
+          <div>
+            <article className="video__description">
+              <h2>Zagotovitev 100% kakovost</h2>
+              <p>
+                Kot je prikazano na video posnetku, vaše preproge opravijo šest
+                različnih korakov, da zagotovijo popolnoma čiste preproge.
+              </p>
+              <br />
+              <p>
+                Uporabljamo profesionalno avtomatsko opremo za pranje preprog in
+                ekološka čistila za preproge. Podrobnejši opis - vsak korak v
+                našem procesu najdete
+                {/* <Link href="/#cleaning-process"> */}
+                <a
+                  className="video__description-link"
+                  onClick={() => scrollToElement("cleaning-process")}
+                >
+                  tukaj.
+                </a>
+                {/* </Link> */}
+              </p>
+            </article>
+          </div>
         </section>
         <Services />
 

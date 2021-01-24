@@ -49,7 +49,7 @@ const ServicesStyled = styled.div`
     `}
     }
     p {
-      font-size: 2rem;
+      font-size: 1.8rem;
       ${respondTo.laptopSmall`
         font-size: 1.8rem;
       `}
@@ -94,6 +94,10 @@ const ServicesStyled = styled.div`
         }
       }
     }
+  }
+
+  .services-desc {
+    padding: 2rem;
   }
 
   .price-list {
@@ -279,34 +283,60 @@ const Services = () => {
       <div className="hero">
         <div className="left-hero">
           <h2>Zakaj izbrati Aladinko?</h2>
+          {/* <p> */}
+          {/* Čistilnica Aladinko d.o.o je profesionalno za pranje preproge v
+          Mariboru, po svoji velikosti in profesionalnem pristop pa lahko
+          izpolnjujejo vse vaše zahteve za: */}
           <p>
-            Čistilnica Aladinko d.o.o je profesionalno za pranje preproge v
-            Mariboru, po svoji velikosti in profesionalnem pristop pa lahko
-            izpolnjujejo vse vaše zahteve za:
-            <ul className="left-hero__benefits-list">
-              <li>
-                Pranje in čiščenje preprog z uporabo najsodobnejših tehnologij
-                pranje.
-              </li>
-              {/* <li>Brezplačni prevzem ter dostava v roku 48ur.</li> */}
-              <li>
-                Najcenejši storitve v Mariboru, ker je celotni proces pranje
-                avtomatiziran.
-              </li>
-              <li>Vrhunsko pranje preprog z dolgimi lasmi</li>
-              <li>
-                Pakiranje preproge v zaščitnu foliju. 100% suhi z prijeten vonj.
-              </li>
-              <li>
-                Zapleten postopek, ki je sestavljen iz 7 različnih korakov za
-                zagotovitev najvišje kakovosti
-              </li>
-              <li>
-                Z uporabo naših storitev lahko osvežite vaš dom, in preprečite
-                nastenek bolezni, raznih alergij ter ostalih škodlivih učinkov
-              </li>
-            </ul>
+            Ste med tistimi, ki si svojega toplega doma ne predstavljajo brez
+            velike lepe preproge? Ali veste, da je praktično nemogoče ustvariti
+            to toplo vzdušje v domu brez teh čudovitih tal.
           </p>
+          <p>
+            Strinjate se, da otroška soba ni otroška, ​​če ni preproge, po
+            kateri bi otrok lahko razpršil svoje igrače in brezskrbno užival v
+            svoji igri.
+          </p>
+          <p>
+            Vendar je treba spomniti, da preproga, kljub vsem prednostim, ima
+            nekaj pomanjkljivosti
+          </p>
+          <p>
+            Ali veste, kakšno je povprečno število bakterij v hišni preprogi na
+            površini 10x10 cm
+          </p>
+          <p>
+            Na majhni površini, kot je ta, je 300000 bakterij, kar je približno
+            1000-krat več kot na straniščni školjki.
+          </p>
+          <p>
+            Kako potem lahko brezskrbno pustite otroka, da se plazi preprogi?
+            Zelo enostavno - <b>ker imamo rešitev.</b>
+          </p>
+          {/* <ul className="left-hero__benefits-list"> */}
+          {/* <li>
+              Pranje in čiščenje preprog z uporabo najsodobnejših tehnologij
+              pranje.
+            </li>
+            {/* <li>Brezplačni prevzem ter dostava v roku 48ur.</li> */}
+          {/* <li>
+              Najcenejši storitve v Mariboru, ker je celotni proces pranje
+              avtomatiziran.
+            </li>
+            <li>Vrhunsko pranje preprog z dolgimi lasmi</li>
+            <li>
+              Pakiranje preproge v zaščitnu foliju. 100% suhi z prijeten vonj.
+            </li>
+            <li>
+              Zapleten postopek, ki je sestavljen iz 7 različnih korakov za
+              zagotovitev najvišje kakovosti
+            </li>
+            <li>
+              Z uporabo naših storitev lahko osvežite vaš dom, in preprečite
+              nastenek bolezni, raznih alergij ter ostalih škodlivih učinkov
+            </li> */}
+          {/* </ul> */}
+          {/* </p> */}
         </div>
 
         <div className="right-hero">
@@ -329,6 +359,46 @@ const Services = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div>
+        <Image src="germs.jpg" alt="Umazanije na preproge" />
+        <div className="services-desc">
+          <p>
+            Naša storitev preprog ALADINKO ponuja storitev profisionalnega
+            čiščenja in antibakterijskega pranja preprog.
+          </p>
+          <p>
+            Ne glede na to, koliko skrbite za higijeno v svojem domu, ne glede
+            na to, kako pogosto pretresete in posesate preprogo in nikomur ne
+            dovolite , da na njo stopi v čevljih, bakterije se še vedno bodo
+            tvorile in ujele.
+          </p>
+          <p>
+            Zato je zelo pomembno, ne samo zaradi estetike, ampak tudi zaradi
+            svojega zdravlja, redno vzdrževati svoje preproge v profesionalnem
+            servisu preprog kakršen je naš.
+          </p>
+          <p>
+            Antibakterijskega pranja preprog, ki ga izvajamo, ni treba pogosto
+            opravljati, pomembno pa je , da je dovolj reden in vašezdravlje ne
+            bo ogroženo.
+          </p>
+          <p>
+            Upoštevajte , da imamo posebne čistilne stroje, pa tudi to, da imamo
+            profesionalne antibakterijske detergente, ki so posebej zasnovani za
+            uničevanje bakterij, ki so skrite globoko v vaši preprogi.
+          </p>
+          <p>
+            S kombinacijo strojev, posebnih ščetk in teh sredstev nam uspe
+            očistiti preprogo tudi najmanjših in najbolj skritih organizmov, ki
+            lahko resno škodijo vašemu zdravlju.
+          </p>
+          <p>
+            Izkoristite vse prednosti, ki jih preproge prinašajo domu, kot so
+            toplo vzdušje, lep dizajn in idealna podlaga za igro otrok.
+            Pomanjklivosti, kot je težka higijena, pa prepustite nam.
+          </p>
         </div>
       </div>
 
@@ -392,7 +462,7 @@ const Services = () => {
               1. Prevzem in vrednotenje
             </h3>
             <p>
-              Za vsa naročila nad 6m2 na območju maribor, pridemo mi iskat. Po
+              Za vsa naročila nad 20€ na območju maribor, pridemo mi iskat. Po
               prejemu preproge osebje pralnice oceni stopnjo umazanosti in
               določi način obdelave tkanine.
             </p>
@@ -402,7 +472,7 @@ const Services = () => {
           <Image src="carpet-photo.png" alt="Slikanje preproge s poškodami" />
           <div>
             <h3 className="cleaning-process__item-title">
-              2. Slikanje tepiha ( sa oštećenjima i izlivenim bojama )
+              2. Fotografiranje preprog (s poškodovano in razlito barvo)
             </h3>
             <p>
               Pred kakršnim koli dejanjem se preproge s poškodbami fotografirajo
@@ -429,13 +499,15 @@ const Services = () => {
 
           <div>
             <h3 className="cleaning-process__item-title">
-              3. Tresenje preprog v posebnem stroju, ki odstrani 80%
+              3. Stresanje prahu s preprog, v stroj ki odstrani 80%
               prahu/umazanje.
             </h3>
             <p>
-              Prvi korak pri globinskem čiščenju preprog je strojno
-              odstranjevanje vsa groba umazanija, prah in las s suhe preproge za
-              izboljšanje kakovosti pranja.
+              Preproge najprej gredo skozi stroj, ki jih na obeh straneh globoko
+              pretrese, gre za odstranjevanje prahu ali stresalnik prahu. S to
+              metodo odstranimo prah in umazanijo, ki se je prikradla v
+              najgloblje plasti preproge.To je pravzaprav najbolj pomembno pri
+              pranju. Preproga se brez tega postopka ni mogoče pravilno oprati.
             </p>
           </div>
         </div>
@@ -450,10 +522,11 @@ const Services = () => {
               4. Pranje preprog v avtomatskem pralnem stroju za preproge.
             </h3>
             <p>
-              Preproga je namočena v vodi za boljše razkrojevanje nečistoč in
-              pripravo za pranje so madeži obdelani z ustreznimi sredstvi in
-              ​​mehki se nanese s čopiči in krožnimi gibi detergent, ki prodre
-              do votka preproge.
+              Pred pranjem so preproge popolnoma namočene v vodi, obdelane
+              odvisno od vrste in debeline preproge z različnimi ščetkami in
+              kemikalijami. Nato pod visokim pritiskom vode odstranimo vso
+              umazanijo in kemikalije, ki so bile na preprogi. Če je preproga
+              izredno umazana, postopek ponovimo večkrat.
             </p>
           </div>
         </div>
@@ -462,14 +535,16 @@ const Services = () => {
 
           <div>
             <h3 className="cleaning-process__item-title">
-              5. Ožemanje preprog v centrifuge.
+              5. Ožemanje in ispiranje v centrifuge.
             </h3>
             <p>
-              Izpiranje preprog je strogo nadzorovan postopek, ki spremlja
-              čistočo voda, ki prihaja iz stroja. Ko je voda čista, se dotok
-              ustavi in ​​začne se postopek centrifugiranja. Centrifuga preproge
-              ne posuši odteče na zelo nizek odstotek vlažnosti, do 5%
-              vlažnosti.
+              Po pranju preprogo damo v centrifugo za ožemanje . To je poseben
+              stroj, ki omogoča preproga samo po 2 min. Da se 95% posuši. Ta
+              obdelava je zelo pomembna za volnene, perziske, svilene in vse
+              občutljive preproge, ki zaradi razlitja barv so tvegane za njihovo
+              nego. Med delovenjem tega stroja se doda tudi čista voda in
+              preproga se popolnoma spere do roba (načeloma delovanja pralnega
+              stroja)
             </p>
           </div>
         </div>
@@ -478,13 +553,11 @@ const Services = () => {
 
           <div>
             <h3 className="cleaning-process__item-title">
-              6. Sušenje u komorama
+              6. Sušenje v komore
             </h3>
             <p>
-              V sušilni komori preproge sušimo pri optimalni temperaturi z
-              strojno razvlaževanje. Preproga se posuši v nekaj ure, hkrati pa
-              preprog je zaščiten pred negativnimi zunanjimi in atmosferskimi
-              vplivi vplivi, kot so sonce, veter, dež in prah.
+              Po centrifugiranju preproge shranimo v posebne sušilne komore, ki
+              so opremljene s sistemi za prhanje in odstranevanje vlage.
             </p>
           </div>
         </div>
@@ -499,17 +572,17 @@ const Services = () => {
               7. Končno krtačenje, sesanje, pakiranje in dostava preprog.
             </h3>
             <p>
-              Suha preproga je še enkrat posesana, kar odpravi kakršno koli
-              ostanki prahu in umazanije. Oprane in posušene preproge so zavite
-              folije, da ohranijo svojo čistost in svežino. Preprog je opran in
-              pripravljen za dostavo ali prevzem.
+              Preproge iz komore so suhe, čiste in gredo na zadnjo obdelavo,
+              kjer končni stroj jih končno posrka in razčeše. Nato se pakirajo v
+              transportne vrečke, ki vam omogočajo varno in higijenska dostavo
+              na vaš naslov.
             </p>
           </div>
         </div>
         <p className="warning-message">
           Opmonik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
-          6m<sup>2</sup> v občini Maribor in Starše. Izven Maribor je potreben
-          predhoden dogovor.
+          20€ v občini Maribor in Starše. Izven Maribor je potreben predhoden
+          dogovor.
         </p>
       </section>
     </ServicesStyled>

@@ -133,8 +133,8 @@ const Prices = () => {
   return (
     <TableStyled>
       <p className="warning-message">
-        Opmonik: Do 31.10.2020 vseh navadne preproge so z promocijski ceni od 3€
-        na m<sup>2</sup>, ostale preproge pa so z promocijski ceni od 5€ na m
+        Opmonik: Do 01.03.2021 vseh navadne preproge so z promocijski ceni od 4€
+        na m<sup>2</sup>, ostale preproge pa so z promocijski ceni od 6€ na m
         <sup>2</sup>
       </p>
       <div className="container-table100">

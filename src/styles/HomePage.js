@@ -155,6 +155,10 @@ export const HeroStyled = styled.div`
 export const HomeStyled = styled.main`
   width: 100%;
 
+  .main-desc {
+    padding: 2rem;
+    text-align: left;
+  }
   .video {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -185,8 +189,8 @@ export const HomeStyled = styled.main`
         font-size: 1.6rem;
       `}
       p {
-        font-size: 2rem;
-        text-align: justify;
+        font-size: 1.8rem;
+        text-align: left;
         padding: 0 8rem;
         ${respondTo.tablet` 
           padding: 0 4rem;
