@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import icons from "../../utils/icons";
+import React from 'react';
+import styled from 'styled-components';
+import icons from '../../utils/icons';
 
 const TableStyled = styled.div`
   width: 100%;
@@ -129,31 +129,31 @@ const TableStyled = styled.div`
   }
 `;
 
-const Prices = () => {
-  return (
-    <TableStyled>
-      <p className="warning-message">
-        Opomnik: Do 01.03.2021 vseh navadne preproge so z promocijski ceni od 4€
-        na m<sup>2</sup>, ostale preproge pa so z promocijski ceni od 6€ na m
-        <sup>2</sup>
-      </p>
-      <div className="container-table100">
-        <div className="wrap-table100">
-          <div className="table100 ver1 m-b-110">
-            <table data-vertable="ver1">
-              <thead>
-                <tr className="row100 head">
-                  {/* <th className="column100 column1" data-column="column1"></th> */}
-                  <th className="column100 column1" data-column="column2">
-                    Storitev
-                  </th>
-                  <th className="column100 column2" data-column="column3">
-                    Meritev
-                  </th>
-                  <th className="column100 column3" data-column="column4">
-                    Cena
-                  </th>
-                  {/* <th className="column100 column5" data-column="column5">
+const Prices = () => (
+  <TableStyled>
+    <p className="warning-message">
+      Opomnik: Do 30.04.2021 vseh navadne preproge so z promocijski ceni od 4€
+      na m<sup>2</sup>, volnene in močno umazane pa so z promocijski ceni od 6€
+      na m<sup>2</sup>, perzijske, orientalske so z promocijski ceni od 8€ na m
+      <sup>2</sup>
+    </p>
+    <div className="container-table100">
+      <div className="wrap-table100">
+        <div className="table100 ver1 m-b-110">
+          <table data-vertable="ver1">
+            <thead>
+              <tr className="row100 head">
+                {/* <th className="column100 column1" data-column="column1"></th> */}
+                <th className="column100 column1" data-column="column2">
+                  Storitev
+                </th>
+                <th className="column100 column2" data-column="column3">
+                  Meritev
+                </th>
+                <th className="column100 column3" data-column="column4">
+                  Cena
+                </th>
+                {/* <th className="column100 column5" data-column="column5">
                     Wednesday
                   </th>
                   <th className="column100 column6" data-column="column6">
@@ -165,63 +165,62 @@ const Prices = () => {
                   <th className="column100 column8" data-column="column8">
                     Saturday
                   </th> */}
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="row100">
-                  <td className="column100 column1" data-column="column1">
-                    Tanke preproge
-                  </td>
-                  <td className="column100 column2" data-column="column2">
-                    &#13217;
-                  </td>
-                  <td className="column100 column3" data-column="column3">
-                    6 €
-                  </td>
-                </tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="row100">
+                <td className="column100 column1" data-column="column1">
+                  Tanke preproge
+                </td>
+                <td className="column100 column2" data-column="column2">
+                  &#13217;
+                </td>
+                <td className="column100 column3" data-column="column3">
+                  6 €
+                </td>
+              </tr>
 
-                <tr className="row100">
-                  <td className="column100 column1" data-column="column1">
-                    Volnena, shaggy, močneje umazana
-                  </td>
-                  <td className="column100 column2" data-column="column2">
-                    &#13217;
-                  </td>
-                  <td className="column100 column3" data-column="column3">
-                    9 €
-                  </td>
-                </tr>
+              <tr className="row100">
+                <td className="column100 column1" data-column="column1">
+                  Volnena, shaggy, močneje umazana
+                </td>
+                <td className="column100 column2" data-column="column2">
+                  &#13217;
+                </td>
+                <td className="column100 column3" data-column="column3">
+                  9 €
+                </td>
+              </tr>
 
-                <tr className="row100">
-                  <td className="column100 column1" data-column="column1">
-                    Orientalska - Perzijska
-                  </td>
-                  <td className="column100 column2" data-column="column2">
-                    &#13217;
-                  </td>
-                  <td className="column100 column3" data-column="column3">
-                    12 €
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <tr className="row100">
+                <td className="column100 column1" data-column="column1">
+                  Orientalska - Perzijska
+                </td>
+                <td className="column100 column2" data-column="column2">
+                  &#13217;
+                </td>
+                <td className="column100 column3" data-column="column3">
+                  12 €
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+    </div>
 
-      <section>
-        <h2>Kaj vklučuje vsaka ponudba?</h2>
-        <ul>
-          <li>{icons.DustMachine}Tresenje preproge</li>
-          <li>{icons.ChemicalWashing}Kemično pranje</li>
-          <li>{icons.Centrifuge}Centrifuga z čista voda</li>
-          <li>{icons.Vacuming}Sesanje</li>
-          <li>{icons.Brushing}Krtačenje</li>
-          <li>{icons.Truck}Dostava in prevzem</li>
-        </ul>
-      </section>
-    </TableStyled>
-  );
-};
+    <section>
+      <h2>Kaj vklučuje vsaka ponudba?</h2>
+      <ul>
+        <li>{icons.DustMachine}Tresenje preproge</li>
+        <li>{icons.ChemicalWashing}Kemično pranje</li>
+        <li>{icons.Centrifuge}Centrifuga z čista voda</li>
+        <li>{icons.Vacuming}Sesanje</li>
+        <li>{icons.Brushing}Krtačenje</li>
+        <li>{icons.Truck}Dostava in prevzem</li>
+      </ul>
+    </section>
+  </TableStyled>
+);
 
 export default Prices;
