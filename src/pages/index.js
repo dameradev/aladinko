@@ -110,8 +110,8 @@ const HomePage = () => {
         <section className="main-desc">
           <p>
             Pralnica Aladinko ponuja profesionalno storitev pranja preprog v
-            Mariboru in s svojim pristopom zagotovlja vrhunsko pranje vaših
-            preprog.
+            Mariboru in Ljubljane ter s svojim pristopom zagotovlja vrhunsko
+            pranje vaših preprog.
           </p>
           <p>
             Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko
