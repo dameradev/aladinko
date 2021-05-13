@@ -132,7 +132,7 @@ const TableStyled = styled.div`
 const Prices = () => (
   <TableStyled>
     <p className="warning-message">
-      Opomnik: Do 30.04.2021 vseh navadne preproge so z promocijski ceni od 4€
+      Opomnik: Do 31.05.2021 vseh navadne preproge so z promocijski ceni od 4€
       na m<sup>2</sup>, volnene in močno umazane pa so z promocijski ceni od 6€
       na m<sup>2</sup>, perzijske, orientalske so z promocijski ceni od 8€ na m
       <sup>2</sup>
