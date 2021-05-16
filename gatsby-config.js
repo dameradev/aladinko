@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   // pathPrefix: "",
   siteMetadata: {
-    title: `Aladinko Preproge`,
+    title: `Aladinko Pranje Preproge`,
     siteUrl: 'https://aladinko.si',
     description:
       'Profesionalna opremljena čistilnica za globinsko pranje preproge v Mariboru in Ljubljane.',

@@ -98,7 +98,7 @@ const HomePage = () => {
                 alt="Akcija pranje preproge"
               />
               <p className="hero__promotion-price-notice">
-                Velja do 30.04.2021
+                Velja do 31.05.2021
               </p>
             </div>
             <h2 className="opening-again">
