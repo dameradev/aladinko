@@ -48,12 +48,14 @@ const Carpet = ({ totalPrice, setTotalPrice, setCarpets, carpets }) => {
 
   const handlePriceCalculation = () => {
     let calculatedPrice;
-    if (carpetType === 'normal') {
+    if (carpetType === 'low') {
       calculatedPrice = width * height * 4;
-    } else if (carpetType === 'medium') {
+    } else if (carpetType === 'normal') {
       calculatedPrice = width * height * 6;
+    } else if (carpetType === 'medium') {
+      calculatedPrice = width * height * 9;
     } else if (carpetType === 'high') {
-      calculatedPrice = width * height * 8;
+      calculatedPrice = width * height * 12;
     }
     setPrice(calculatedPrice);
   };
@@ -81,8 +83,9 @@ const Carpet = ({ totalPrice, setTotalPrice, setCarpets, carpets }) => {
           }}
           value={carpetType}
         >
-          <option value="normal">Navadne</option>
-          <option value="medium">Debelejše/Volnene</option>
+          <option value="low">Tanke navadne</option>
+          <option value="normal">Debelejše navadne, tanke volnene</option>
+          <option value="medium">Debelejše volnene</option>
           <option value="high">Perzijske/Orjentalske</option>
         </select>
       </label>

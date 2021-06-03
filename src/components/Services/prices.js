@@ -132,8 +132,9 @@ const TableStyled = styled.div`
 const Prices = () => (
   <TableStyled>
     <p className="warning-message">
-      Opomnik: Do 30.06.2021 vseh debelekjše volnene in perzijske/orjentalske,
-      ročno tkane preproge 10€. Tanke navadne ostanejo na 4 na m<sup>2</sup>,
+      Opomnik: Do 30.06.2021 vseh debelejše volnene in perzijske/orjentalske,
+      ročno tkane preproge 10% popust. Tanke navadne ostanejo na 4 na m
+      <sup>2</sup>.
     </p>
     <div className="container-table100">
       <div className="wrap-table100">
@@ -204,7 +205,7 @@ const Prices = () => (
 
               <tr className="row100">
                 <td className="column100 column1" data-column="column1">
-                  Orientalske, Perzijske, Ročka tkana
+                  Orientalske, perzijske, ročno tkana
                 </td>
                 <td className="column100 column2" data-column="column2">
                   &#13217;
