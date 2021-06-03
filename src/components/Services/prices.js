@@ -132,10 +132,8 @@ const TableStyled = styled.div`
 const Prices = () => (
   <TableStyled>
     <p className="warning-message">
-      Opomnik: Do 31.05.2021 vseh navadne preproge so z promocijski ceni od 4€
-      na m<sup>2</sup>, volnene in močno umazane pa so z promocijski ceni od 6€
-      na m<sup>2</sup>, perzijske, orientalske so z promocijski ceni od 8€ na m
-      <sup>2</sup>
+      Opomnik: Do 30.06.2021 vseh debelekjše volnene in perzijske/orjentalske,
+      ročno tkane preproge 10€. Tanke navadne ostanejo na 4 na m<sup>2</sup>,
     </p>
     <div className="container-table100">
       <div className="wrap-table100">
@@ -170,7 +168,19 @@ const Prices = () => (
             <tbody>
               <tr className="row100">
                 <td className="column100 column1" data-column="column1">
-                  Tanke preproge
+                  Tanke navadne preproge
+                </td>
+                <td className="column100 column2" data-column="column2">
+                  &#13217;
+                </td>
+                <td className="column100 column3" data-column="column3">
+                  4 €
+                </td>
+              </tr>
+
+              <tr className="row100">
+                <td className="column100 column1" data-column="column1">
+                  Debelejše navadne, kosmate, shaggy, močneje umazana
                 </td>
                 <td className="column100 column2" data-column="column2">
                   &#13217;
@@ -182,7 +192,7 @@ const Prices = () => (
 
               <tr className="row100">
                 <td className="column100 column1" data-column="column1">
-                  Volnena, shaggy, močneje umazana
+                  Debelejše volnene
                 </td>
                 <td className="column100 column2" data-column="column2">
                   &#13217;
@@ -194,7 +204,7 @@ const Prices = () => (
 
               <tr className="row100">
                 <td className="column100 column1" data-column="column1">
-                  Orientalska - Perzijska
+                  Orientalske, Perzijske, Ročka tkana
                 </td>
                 <td className="column100 column2" data-column="column2">
                   &#13217;
