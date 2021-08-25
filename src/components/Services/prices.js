@@ -131,11 +131,11 @@ const TableStyled = styled.div`
 
 const Prices = () => (
   <TableStyled>
-    <p className="warning-message">
+    {/* <p className="warning-message">
       Opomnik: Do 30.06.2021 vseh debelejše volnene in perzijske/orjentalske,
       ročno tkane preproge 10% popust. Tanke navadne ostanejo na 4 na m
       <sup>2</sup>.
-    </p>
+    </p> */}
     <div className="container-table100">
       <div className="wrap-table100">
         <div className="table100 ver1 m-b-110">

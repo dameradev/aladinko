@@ -12,7 +12,7 @@ const SlideshowStyles = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.4;
+    opacity: 0.5;
   }
 `;
 const Slideshow = ({ slidesCaptions }) => (
@@ -37,9 +37,9 @@ const Slideshow = ({ slidesCaptions }) => (
       `)}
       initDelay={2} // delay before the first transition (if left at 0, the first image will be skipped initially)
       transition={4} // transition duration between images
-      duration={8} // how long an image is shown
+      duration={6} // how long an image is shown
       // specify images to include (and their order) according to `relativePath`
-      images={['washing.jpg', 'dusting.jpg']}
+      images={['washing.jpg', 'carpets-rolled.jpg', 'carpets-rolled-1.jpg']}
     >
       {/* Captions in sync with background images */}
       {/* {slidesCaptions.map((caption) => (

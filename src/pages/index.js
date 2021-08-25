@@ -80,29 +80,33 @@ const HomePage = () => {
           <div className="container">
             <div className="left-panel">
               <h1>Čiste preproge</h1>
+              <h1>Brezplačni prevzem in dostava na dom</h1>
               <h1>Profesionalna storitev</h1>
-              <h1>Poštena cena</h1>
+              {/* <h1>Poštena cena</h1> */}
             </div>
 
+            {/* <h2 className="opening-again">
+              Delamo na območje Ljubljane in Maribor.
+            </h2> */}
             <div className="hero__promotion-price">
-              <h2 className="hero__promotion-price__regular-price">
+              {/* <h2 className="hero__promotion-price__regular-price">
                 6€ po &#13217;
-              </h2>
+              </h2> */}
               <h2 className="hero__promotion-price__title">
-                promocijska cena od <br />
-                <span>4€</span> po &#13217;
+              Začetna cena pranje preproge 
+              <span> 4€</span> po &#13217;
               </h2>
-              <img
+              {/* <img
                 className="discount-icon"
-                src={Discount}
-                alt="Akcija pranje preproge"
-              />
+                src={Discount} 
+                 alt="Akcija pranje preproge"
+              /> */}
               <p className="hero__promotion-price-notice">
-                Velja do 30.06 .2021
+                {/* Velja do 30.06 .2021 */}
               </p>
             </div>
             <h2 className="opening-again">
-              Delamo na območje Ljubljane in Maribor.
+              Delamo na območje Ljubljane, Maribora, Celja in Kranja.
             </h2>
           </div>
         </HeroStyled>

@@ -638,7 +638,7 @@ const Services = () => {
         </div>
         <p className="warning-message">
           Opomnik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
-          20€ v občini Maribor in Ljubljana.
+          20€ v občini Maribora, Ljubljane, Celja, Kranja.
         </p>
       </section>
       <div className="carpet-price-calculator">

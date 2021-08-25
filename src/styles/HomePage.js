@@ -57,20 +57,42 @@ export const HeroStyled = styled.div`
     z-index: 10;
 
     ${respondTo.tablet` 
-      display:none;
+      // display:none;
     `}
 
     h1 {
+      
       line-height: 6.5rem;
       font-style: italic;
       font-weight: 500;
       font-size: 3.5rem;
+      position: relative;
+
+      &:before {
+       position: absolute;
+       content: "";
+       width: 1rem;
+       height: 1rem;
+       background: #fff;
+       top: 2.5rem;
+       left: -2rem;
+       
+       ${respondTo.tablet` 
+          display:none;
+        `}
+      }
+      &:nth-child(odd) {
+        ${respondTo.tablet` 
+          display:none;
+        `}
+      }
     }
   }
 
   .hero {
     &__promotion-price {
       position: relative;
+      max-width: 20rem;
       padding: 2rem;
       display: flex;
       flex-direction: column;
@@ -150,7 +172,7 @@ export const HeroStyled = styled.div`
         /* text-transform: uppercase; */
         font-style: unset;
         font-size: 3rem;
-        line-height: 6.5rem;
+        /* line-height: 6.5rem; */
         color: var(--white);
         z-index: 10;
 
@@ -159,10 +181,10 @@ export const HeroStyled = styled.div`
           `}
 
         span {
-          color: var(--primary);
-          font-size: 8rem;
-          display: inline-block;
-          transform: translateY(2rem);
+          color: var(--red);
+          font-size: 4rem;
+          /* display: inline-block; */
+          /* transform: translateY(2rem); */
         }
       }
 
