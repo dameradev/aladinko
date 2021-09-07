@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import respondTo from '../utils/respondTo';
+import styled from "styled-components";
+import respondTo from "../utils/respondTo";
 
 export const HeroStyled = styled.div`
   padding: 0 10%;
@@ -32,6 +32,8 @@ export const HeroStyled = styled.div`
 
     ${respondTo.mobile` 
       padding: 0 5%;
+      text-align: center;
+      gap: 0;
   `}
     ${respondTo.tablet` 
       flex-direction: column;
@@ -46,6 +48,9 @@ export const HeroStyled = styled.div`
     position: relative;
     padding: 2rem;
     color: #fff;
+    ${respondTo.mobile` 
+      margin-top:0;
+    `}
   }
 
   .slideshow {
@@ -61,7 +66,6 @@ export const HeroStyled = styled.div`
     `}
 
     h1 {
-      
       line-height: 6.5rem;
       font-style: italic;
       font-weight: 500;
@@ -69,15 +73,15 @@ export const HeroStyled = styled.div`
       position: relative;
 
       &:before {
-       position: absolute;
-       content: "";
-       width: 1rem;
-       height: 1rem;
-       background: #fff;
-       top: 2.5rem;
-       left: -2rem;
-       
-       ${respondTo.tablet` 
+        position: absolute;
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background: #fff;
+        top: 2.5rem;
+        left: -2rem;
+
+        ${respondTo.tablet` 
           display:none;
         `}
       }
@@ -102,7 +106,7 @@ export const HeroStyled = styled.div`
       `};
 
       &::before {
-        content: '';
+        content: "";
         background: #000;
         height: 100%;
         width: 100%;
@@ -136,7 +140,7 @@ export const HeroStyled = styled.div`
         `}
         /* RED LINES */
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 8rem;
           height: 0.5rem;
@@ -152,7 +156,7 @@ export const HeroStyled = styled.div`
           `}
         }
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 8rem;
           height: 0.5rem;
