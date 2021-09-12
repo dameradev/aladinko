@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
+import React, { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
 
-import Discount from '../assets/images/discount.svg';
-import SEO from '../components/SEO';
-import Services from '../components/Services';
-import Slideshow from '../components/Slideshow';
+import Discount from "../assets/images/discount.svg";
+import SEO from "../components/SEO";
+import Services from "../components/Services";
+import Slideshow from "../components/Slideshow";
 
-import { HomeStyled, HeroStyled } from '../styles/HomePage';
+import logo from "../assets/images/logo.svg";
+import { HomeStyled, HeroStyled } from "../styles/HomePage";
 
-import scrollToElement from '../utils/scrollToElement';
+import scrollToElement from "../utils/scrollToElement";
 
 const commentIds = [
-  '124222499438055',
-  '122917736235198',
-  '122883026238669',
-  '122871602906478',
-  '122780256248946',
+  "124222499438055",
+  "122917736235198",
+  "122883026238669",
+  "122871602906478",
+  "122780256248946",
 ];
 
 let commentIndex = 0;
 const HomePage = () => {
-  const [comment, setComment] = useState('124222499438055');
+  const [comment, setComment] = useState("124222499438055");
 
   const loadFbLoginApi = () => {
     window.fbAsyncInit = function () {
@@ -29,7 +30,7 @@ const HomePage = () => {
         cookie: true, // enable cookies to allow the server to access
         // the session
         xfbml: true, // parse social plugins on this page
-        version: 'v2.5', // use version 2.1
+        version: "v2.5", // use version 2.1
       });
     };
 
@@ -40,9 +41,9 @@ const HomePage = () => {
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = '//connect.facebook.net/en_US/sdk.js';
+      js.src = "//connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'facebook-jssdk');
+    })(document, "script", "facebook-jssdk");
   };
 
   useEffect(() => {
@@ -70,7 +71,7 @@ const HomePage = () => {
 
   return (
     <>
-      <SEO title="Aladinko" />
+      <SEO title="Aladinko" image={logo} />
       <HomeStyled>
         <div id="fb-root" />
 
@@ -93,8 +94,8 @@ const HomePage = () => {
                 6€ po &#13217;
               </h2> */}
               <h2 className="hero__promotion-price__title">
-              Začetna cena pranje preproge 
-              <span> 4€</span> po &#13217;
+                Začetna cena pranje preproge
+                <span> 4€</span> po &#13217;
               </h2>
               {/* <img
                 className="discount-icon"
@@ -153,7 +154,7 @@ const HomePage = () => {
                 {/* <Link href="/#cleaning-process"> */}
                 <a
                   className="video__description-link"
-                  onClick={() => scrollToElement('cleaning-process')}
+                  onClick={() => scrollToElement("cleaning-process")}
                 >
                   tukaj.
                 </a>
