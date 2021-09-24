@@ -1,11 +1,11 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import BackgroundSlider from 'gatsby-image-background-slider';
-import styled from 'styled-components';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import BackgroundSlider from "gatsby-image-background-slider";
+import styled from "styled-components";
 
 const SlideshowStyles = styled.div`
   &::before {
-    content: '';
+    content: "";
     background: #000;
     height: 100%;
     width: 100%;
@@ -39,7 +39,7 @@ const Slideshow = ({ slidesCaptions }) => (
       transition={4} // transition duration between images
       duration={6} // how long an image is shown
       // specify images to include (and their order) according to `relativePath`
-      images={['washing.jpg', 'carpets-rolled.jpg', 'carpets-rolled-1.jpg']}
+      images={["carpets-rolled.jpg", "carpets-rolled-1.jpg"]}
     >
       {/* Captions in sync with background images */}
       {/* {slidesCaptions.map((caption) => (

@@ -107,7 +107,7 @@ const HomePage = () => {
               </p>
             </div>
             <h2 className="opening-again">
-              Delamo na območje Ljubljane, Maribora, Celja in Kranja.
+              Delamo na območje Ljubljane, Maribora in Celja.
             </h2>
           </div>
         </HeroStyled>
@@ -115,8 +115,8 @@ const HomePage = () => {
         <section className="main-desc">
           <p>
             Pralnica Aladinko ponuja profesionalno storitev pranja preprog v
-            Mariboru in Ljubljane ter s svojim pristopom zagotovlja vrhunsko
-            pranje vaših preprog.
+            Ljubljane, Maribora in Celja, ter s svojim pristopom zagotovlja
+            vrhunsko pranje vaših preprog.
           </p>
           <p>
             Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko

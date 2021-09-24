@@ -107,7 +107,7 @@ export const HeroStyled = styled.div`
 
       &::before {
         content: "";
-        background: #000;
+        /* background: #000; */
         height: 100%;
         width: 100%;
         position: absolute;
