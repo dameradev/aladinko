@@ -28,6 +28,15 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
       <meta name="description" content={site.siteMetadata.description} />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-207972971-1">
+      </script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-207972971-1');
+      </script>
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
       <meta property="og:image" content={image || "/logo.svg"} />
