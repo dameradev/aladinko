@@ -3,16 +3,49 @@ import respondTo from "../utils/respondTo";
 
 export const HeroStyled = styled.div`
   padding: 0 10%;
-  height: calc(100vh - 100px);
+  height: calc(100vh);
+  
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   /* display: flex;
   align-items: center; */
   /* align-items: center;
   justify-content: space-between; */
 
+  .wrapper {
+    z-index: 10;
+    color: #fff !important;
+    max-width: 80%;
+    .desc {
+      color: var(--primary);
+    }
+    
+    h1 {
+      font-size: 4.8rem;
+      z-index: 10000;
+      color: #fff !important;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    .btn-container {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+    }
+    .btn {
+      background: var(--secondary);
+      padding: 1.5rem 3rem;
+      padding-top: 1.6rem;
+      border-radius: 9999px;
+      &-primary {
+        background: var(--primary);
+      }
+    }
+
+  }
   color: #fff;
 
   .container {
@@ -94,6 +127,7 @@ export const HeroStyled = styled.div`
   }
 
   .hero {
+
     &__promotion-price {
       position: relative;
       max-width: 20rem;

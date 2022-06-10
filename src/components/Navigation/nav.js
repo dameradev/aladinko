@@ -17,7 +17,7 @@ const NavStyles = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8rem;
+  /* height: 8rem; */
 
   /* width: 100%; */
   transform: ${(props) =>
@@ -44,10 +44,12 @@ const NavStyles = styled.nav`
   ul {
     display: flex;
     justify-content: space-between;
+    margin: 0;
     margin-right: 3rem;
 
     li {
       text-transform: uppercase;
+      cursor: pointer;
 
       &:not(:last-of-type) {
         padding-top: 1rem;
@@ -59,7 +61,7 @@ const NavStyles = styled.nav`
       }
 
       a {
-        padding-bottom: 2.5rem;
+        /* padding-bottom: 2.5rem; */
         /* padding-top: ${(props) => console.log(props.scrolled)}; */
         transition: all 0.3s;
       }
@@ -69,6 +71,9 @@ const NavStyles = styled.nav`
   }
   .call {
     /* text-align: center; */
+    display: flex;
+    /* flex-direction:column; */
+    align-items: flex-end;
     text-transform: uppercase;
     a {
       color: var(--primary);
@@ -90,7 +95,7 @@ const Nav = ({ hasItems, quantity, className, toggleNav, isOpenNav }) => {
           {/* </Link> */}
         </li>
         <li className="call">
-          Pokličite <br />
+          {/* Pokličite <br /> */}
           <a href="tel:+38664163381">064 16 33 81</a>
         </li>
       </ul>

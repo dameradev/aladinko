@@ -4,9 +4,10 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.svg";
 
 const LogoStyles = styled.div`
-  padding: 1.5rem 0;
+  padding: 2rem;
+  padding-top: 3rem;
   img {
-    height: 7rem;
+    /* height: 7rem; */
     width: 7rem;
   }
 `;

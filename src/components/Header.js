@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
@@ -7,6 +8,8 @@ import scrollToElement from "../utils/scrollToElement";
 
 import Nav from "./Navigation/nav";
 import icons from "../utils/icons";
+
+import { FiTruck } from 'react-icons/fi';
 
 // const NavStyles = styled.nav`
 //   /* margin-bottom: 3rem; */
@@ -35,8 +38,9 @@ import icons from "../utils/icons";
 // `;
 
 export const HeaderStyled = styled.header`
-  height: 8rem;
-  padding: 0 10%;
+  /* height: 8rem; */
+  padding: 2rem 10%;
+  padding-bottom: 0;
   position: fixed;
   display: flex;
   align-items: center;
@@ -109,15 +113,40 @@ export const HeaderStyled = styled.header`
       opacity: 1;
     }
   }
+
+  .header-top {
+    padding: 0.7rem 10%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    color: #fff;
+    span {
+      display: flex; 
+      align-items: center;
+      gap: 1rem;
+      svg {
+        margin-bottom: 5px;
+      }
+    }
+  }
 `;
 
 export default function Header({ isOpenNav, toggleNav }) {
   return (
     <HeaderStyled>
+      <div className='header-top'>
+        <span><FiTruck />  Brezplačni prevzem in dostava na dom </span>
+        <span>Začetna cena pranje preproge 4€ po ㎡</span>
+      </div>
       <Logo />
       <Nav className="nav__desktop" />
       <div
-        className={`hamburger ${isOpenNav && "hamburger-open"}`}
+        className={`hamburger ${isOpenNav && 'hamburger-open'}`}
         onClick={() => toggleNav(isOpenNav)}
       >
         <div className="menu-icon">{icons.Hamburger} </div>
