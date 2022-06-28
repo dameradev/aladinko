@@ -252,6 +252,11 @@ export const HeroStyled = styled.div`
 export const HomeStyled = styled.main`
   width: 100%;
 
+  
+
+  a.text-underline {
+    text-decoration: underline !important;
+  }
   .main-desc {
     padding: 2rem;
     text-align: center;
@@ -278,6 +283,7 @@ export const HomeStyled = styled.main`
     h2 {
       padding: 2rem 0;
     }
+    
     &__description {
       padding: 4rem 2rem;
       text-align: center;

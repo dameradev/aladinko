@@ -10,6 +10,7 @@ import logo from "../assets/images/logo.svg";
 import { HomeStyled, HeroStyled } from "../styles/HomePage";
 
 import scrollToElement from "../utils/scrollToElement";
+import { Link } from 'gatsby';
 
 const commentIds = [
   "124222499438055",
@@ -78,7 +79,7 @@ const HomePage = () => {
         <HeroStyled>
           <Slideshow className="slideshow" />
           <div className='wrapper '>
-            <p className='desc'>Pralnica Aladinko ponuja</p>
+            {/* <p className='desc'>Pralnica Aladinko ponuja</p> */}
             <h1>Profesionalna storitev pranje preprog</h1>
             <p>
             Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko preprečite pojav nekaterih alergij in zmanjšate prisotnost škodljivih bakterij, virusov v vaših domovih.
@@ -101,6 +102,7 @@ const HomePage = () => {
             preprečite pojav nekaterih alergij in zmanjšate prisotnost
             škodljivih bakterij, virusov v vaših domovih.
           </p>
+          
         </section>
         <section className="video">
           <div className="promo-video">
@@ -141,6 +143,7 @@ const HomePage = () => {
             </article>
           </div>
         </section>
+        
         <Services />
 
         <section className="testimonials">

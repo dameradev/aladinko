@@ -8,6 +8,7 @@ import formatMoney from '../../utils/formatMoney';
 
 import Prices from './prices';
 import Carpet from './carpet';
+import { Link } from 'gatsby';
 
 const ServicesStyled = styled.div`
   grid-column: full-start / full-end;
@@ -636,10 +637,16 @@ const Services = () => {
             </p>
           </div>
         </div>
+        <Link to="/prednosti-strokovnega-ciscenja-preprog">
+          <a className='text-underline'>
+          Preberite več o prednosti strokovnem čiščenju preprog
+          </a>
+        </Link>
         <p className="warning-message">
           Opomnik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
           20€ v občini Maribora, Ljubljane, Celja, Kranja.
         </p>
+     
       </section>
       <div className="carpet-price-calculator">
         <h2 className="carpet-price-calculator__title">
@@ -654,46 +661,9 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="germs">
-        <Image src="germs.jpg" alt="Umazanije na preproge" />
-        <div className="services-desc">
-          <p>
-            Naša storitev preprog ALADINKO ponuja storitev profisionalnega
-            čiščenja in antibakterijskega pranja preprog.
-          </p>
-          <p>
-            Ne glede na to, koliko skrbite za higijeno v svojem domu, ne glede
-            na to, kako pogosto pretresete in posesate preprogo in nikomur ne
-            dovolite , da na njo stopi v čevljih, bakterije se še vedno bodo
-            tvorile in ujele.
-          </p>
-          {/* <p>
-          Zato je zelo pomembno, ne samo zaradi estetike, ampak tudi zaradi
-          svojega zdravlja, redno vzdrževati svoje preproge v profesionalnem
-          servisu preprog kakršen je naš.
-        </p> */}
-          <p>
-            Antibakterijskega pranja preprog, ki ga izvajamo, ni treba pogosto
-            opravljati, pomembno pa je , da je dovolj reden in vašezdravlje ne
-            bo ogroženo.
-          </p>
-          <p>
-            Upoštevajte , da imamo posebne čistilne stroje, pa tudi to, da imamo
-            profesionalne antibakterijske detergente, ki so posebej zasnovani za
-            uničevanje bakterij, ki so skrite globoko v vaši preprogi.
-          </p>
-          {/* <p>
-          S kombinacijo strojev, posebnih ščetk in teh sredstev nam uspe
-          očistiti preprogo tudi najmanjših in najbolj skritih organizmov, ki
-          lahko resno škodijo vašemu zdravlju.
-        </p> */}
-          <p>
-            Izkoristite vse prednosti, ki jih preproge prinašajo domu, kot so
-            toplo vzdušje, lep dizajn in idealna podlaga za igro otrok.
-            Pomanjklivosti, kot je težka higijena, pa prepustite nam.
-          </p>
-        </div>
-      </div>
+
+
+
     </ServicesStyled>
   );
 };

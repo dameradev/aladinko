@@ -5,15 +5,27 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 import SEO  from "../components/SEO"
 import styled from 'styled-components'
+import respondTo from '../utils/respondTo'
 // import { PageProps } from "@/definitions"
 
 const BlogPostStyled = styled.article`
-  padding-top: 15rem;
+  padding-top: 18rem;
   max-width: 70rem;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   line-height: 2.6rem;
+  
+  ${respondTo.tablet`
+    padding: 4rem 2rem;
+    padding-top: 18rem;
+    h1, h2 {
+      line-height: 4rem;
+    }
+    img {
+      padding: 2rem;
+    }
+  `}
   /* align-items: center; */
   
 

@@ -39,8 +39,8 @@ import { FiTruck } from 'react-icons/fi';
 
 export const HeaderStyled = styled.header`
   /* height: 8rem; */
-  padding: 3rem 10%;
-  padding-bottom: 0;
+  padding: 4rem 10%;
+  padding-bottom: 1rem;
   position: fixed;
   display: flex;
   align-items: center;
@@ -49,6 +49,7 @@ export const HeaderStyled = styled.header`
   width: 100%;
   z-index: 200;
   /* height */
+  box-shadow:  0 3px 5px rgba(57, 63, 72, 0.3);
 
   /* color: #fff; */
   /* justify-content: space-between; */
@@ -68,6 +69,7 @@ export const HeaderStyled = styled.header`
       display: block;
       
     `}
+
 
     .close-icon,
     .menu-icon {
@@ -90,8 +92,10 @@ export const HeaderStyled = styled.header`
 
     .close-icon {
       opacity: 0;
+      z-index:20000000;
       top: -1.5rem;
       svg {
+        z-index:20000000;
         width: 3rem;
         height: 3rem;
       }

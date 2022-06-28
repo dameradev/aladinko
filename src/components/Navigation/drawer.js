@@ -10,7 +10,7 @@ const DrawerStyles = styled.div`
   /* width: 40vw; */
   /* padding: 0 3rem 3rem 3rem; */
 
-  z-index: 100000;
+  z-index: 10000;
   background: white;
   color: black;
   /* display: flex; */
@@ -19,7 +19,7 @@ const DrawerStyles = styled.div`
   transition: all 0.5s ease-in-out;
   transform: ${(props) =>
       !props.isOpenNav ? "translate(400px)" : "translate(0)"}
-    translateY(8rem);
+    translateY(10rem);
   a {
     color: #fff;
     color: black;
@@ -29,9 +29,10 @@ const DrawerStyles = styled.div`
     display: flex;
     padding: 0 3rem;
     ul {
-      margin-top: 18rem;
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
+      
       text-transform: uppercase;
 
       padding: 0;
