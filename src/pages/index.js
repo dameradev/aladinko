@@ -10,6 +10,7 @@ import logo from "../assets/images/logo.svg";
 import { HomeStyled, HeroStyled } from "../styles/HomePage";
 
 import scrollToElement from "../utils/scrollToElement";
+import { Link } from 'gatsby';
 
 const commentIds = [
   "124222499438055",
@@ -77,38 +78,16 @@ const HomePage = () => {
 
         <HeroStyled>
           <Slideshow className="slideshow" />
-
-          <div className="container">
-            <div className="left-panel">
-              <h1>Čiste preproge</h1>
-              <h1>Brezplačni prevzem in dostava na dom</h1>
-              <h1>Profesionalna storitev</h1>
-              {/* <h1>Poštena cena</h1> */}
+          <div className='wrapper '>
+            {/* <p className='desc'>Pralnica Aladinko ponuja</p> */}
+            <h1>Profesionalna storitev pranje preprog</h1>
+            <p>
+            Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko preprečite pojav nekaterih alergij in zmanjšate prisotnost škodljivih bakterij, virusov v vaših domovih.
+            </p>
+            <div className='btn-container'>
+              <a className='btn' href="tel:+38664163381">POKLIČITE</a>
+              <a className='btn btn-primary' href="tel:+38664163381">PONUDBE</a>
             </div>
-
-            {/* <h2 className="opening-again">
-              Delamo na območje Ljubljane in Maribor.
-            </h2> */}
-            <div className="hero__promotion-price">
-              {/* <h2 className="hero__promotion-price__regular-price">
-                6€ po &#13217;
-              </h2> */}
-              <h2 className="hero__promotion-price__title">
-                Začetna cena pranje preproge
-                <span> 4€</span> po &#13217;
-              </h2>
-              {/* <img
-                className="discount-icon"
-                src={Discount} 
-                 alt="Akcija pranje preproge"
-              /> */}
-              <p className="hero__promotion-price-notice">
-                {/* Velja do 30.06 .2021 */}
-              </p>
-            </div>
-            <h2 className="opening-again">
-              Delamo na območje Ljubljane, Maribora in Celja.
-            </h2>
           </div>
         </HeroStyled>
 
@@ -123,6 +102,7 @@ const HomePage = () => {
             preprečite pojav nekaterih alergij in zmanjšate prisotnost
             škodljivih bakterij, virusov v vaših domovih.
           </p>
+          
         </section>
         <section className="video">
           <div className="promo-video">
@@ -163,6 +143,7 @@ const HomePage = () => {
             </article>
           </div>
         </section>
+        
         <Services />
 
         <section className="testimonials">

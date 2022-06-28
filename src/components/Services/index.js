@@ -8,13 +8,17 @@ import formatMoney from '../../utils/formatMoney';
 
 import Prices from './prices';
 import Carpet from './carpet';
+import { Link } from 'gatsby';
 
 const ServicesStyled = styled.div`
   grid-column: full-start / full-end;
+  max-width: 100vw;
+  overflow:hidden;
   h1 {
     text-align: center;
   }
   .hero {
+    max-width: 100vw;
     display: flex;
     ${respondTo.tabletMini` 
       flex-direction:column;
@@ -22,6 +26,7 @@ const ServicesStyled = styled.div`
   }
 
   .left-hero {
+    max-width: 100vw;
     padding: 5rem 5%;
 
     background: #fafafa;
@@ -39,6 +44,7 @@ const ServicesStyled = styled.div`
       width: 100%;
     `}
     h2 {
+      max-width: 100vw;
       padding-bottom: 2rem;
       font-size: 3.4rem;
       text-align: center;
@@ -65,6 +71,7 @@ const ServicesStyled = styled.div`
   }
 
   .right-hero {
+    max-width: 100vw;
     width: 50%;
     ${respondTo.tabletMini` 
       width: 100%;
@@ -98,6 +105,7 @@ const ServicesStyled = styled.div`
   }
 
   .carpet-price-calculator {
+    max-width: 100vw;
     margin: 3rem 0;
     padding: 0 5%;
     /* display: flex; */
@@ -134,6 +142,7 @@ const ServicesStyled = styled.div`
   }
 
   .germs {
+    max-width: 100vw;
     margin: 5rem 0;
     padding: 0 5%;
     display: flex;
@@ -163,6 +172,7 @@ const ServicesStyled = styled.div`
   }
 
   .services-desc {
+    max-width: 100vw;
     /* padding: 2rem; */
     p {
       &:first-of-type {
@@ -172,6 +182,7 @@ const ServicesStyled = styled.div`
   }
 
   .price-list {
+    max-width: 100vw;
     padding: 0 5%;
 
     /* ${respondTo.laptop` 
@@ -253,6 +264,7 @@ const ServicesStyled = styled.div`
   }
 
   .cleaning-process {
+    max-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -339,6 +351,7 @@ const ServicesStyled = styled.div`
   }
 
   .warning-message {
+    max-width: 100vw;
     grid-column: 1/3;
     font-style: italic;
     font-size: 2.4rem;
@@ -636,10 +649,16 @@ const Services = () => {
             </p>
           </div>
         </div>
+        <Link to="/prednosti-strokovnega-ciscenja-preprog">
+          <a className='text-underline'>
+          Preberite več o prednosti strokovnem čiščenju preprog
+          </a>
+        </Link>
         <p className="warning-message">
           Opomnik: Za brezplačni prevzem/dostavo je potrebno naročilo od minimum
           20€ v občini Maribora, Ljubljane, Celja, Kranja.
         </p>
+     
       </section>
       <div className="carpet-price-calculator">
         <h2 className="carpet-price-calculator__title">
@@ -654,46 +673,9 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="germs">
-        <Image src="germs.jpg" alt="Umazanije na preproge" />
-        <div className="services-desc">
-          <p>
-            Naša storitev preprog ALADINKO ponuja storitev profisionalnega
-            čiščenja in antibakterijskega pranja preprog.
-          </p>
-          <p>
-            Ne glede na to, koliko skrbite za higijeno v svojem domu, ne glede
-            na to, kako pogosto pretresete in posesate preprogo in nikomur ne
-            dovolite , da na njo stopi v čevljih, bakterije se še vedno bodo
-            tvorile in ujele.
-          </p>
-          {/* <p>
-          Zato je zelo pomembno, ne samo zaradi estetike, ampak tudi zaradi
-          svojega zdravlja, redno vzdrževati svoje preproge v profesionalnem
-          servisu preprog kakršen je naš.
-        </p> */}
-          <p>
-            Antibakterijskega pranja preprog, ki ga izvajamo, ni treba pogosto
-            opravljati, pomembno pa je , da je dovolj reden in vašezdravlje ne
-            bo ogroženo.
-          </p>
-          <p>
-            Upoštevajte , da imamo posebne čistilne stroje, pa tudi to, da imamo
-            profesionalne antibakterijske detergente, ki so posebej zasnovani za
-            uničevanje bakterij, ki so skrite globoko v vaši preprogi.
-          </p>
-          {/* <p>
-          S kombinacijo strojev, posebnih ščetk in teh sredstev nam uspe
-          očistiti preprogo tudi najmanjših in najbolj skritih organizmov, ki
-          lahko resno škodijo vašemu zdravlju.
-        </p> */}
-          <p>
-            Izkoristite vse prednosti, ki jih preproge prinašajo domu, kot so
-            toplo vzdušje, lep dizajn in idealna podlaga za igro otrok.
-            Pomanjklivosti, kot je težka higijena, pa prepustite nam.
-          </p>
-        </div>
-      </div>
+
+
+
     </ServicesStyled>
   );
 };

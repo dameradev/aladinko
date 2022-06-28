@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
 
     scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
   }
 
   * {
@@ -37,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.8rem;
     box-sizing: border-box;
     background: #fff;
-   
+    font-family: "Open Sans", sans-serif;
   }
 
   fieldset {
