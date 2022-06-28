@@ -39,7 +39,7 @@ import { FiTruck } from 'react-icons/fi';
 
 export const HeaderStyled = styled.header`
   /* height: 8rem; */
-  padding: 2rem 10%;
+  padding: 3rem 10%;
   padding-bottom: 0;
   position: fixed;
   display: flex;
@@ -48,6 +48,7 @@ export const HeaderStyled = styled.header`
   background: #fff;
   width: 100%;
   z-index: 200;
+  /* height */
 
   /* color: #fff; */
   /* justify-content: space-between; */
@@ -125,12 +126,24 @@ export const HeaderStyled = styled.header`
     justify-content: center;
     gap: 3rem;
     color: #fff;
+
+    ${respondTo.tabletMini`
+      padding: 0.4rem 1rem;
+    `}
+    ${respondTo.mobileSmallest`
+      font-size: 1.3rem;
+    `}
+
     span {
       display: flex; 
       align-items: center;
       gap: 1rem;
+      
       svg {
         margin-bottom: 5px;
+        ${respondTo.tablet`
+          display:none;
+        `}
       }
     }
   }

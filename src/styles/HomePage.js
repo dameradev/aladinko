@@ -14,10 +14,19 @@ export const HeroStyled = styled.div`
   /* align-items: center;
   justify-content: space-between; */
 
+  ${respondTo.tabletMini`
+    padding: 0 4rem;
+  `}
+
   .wrapper {
     z-index: 10;
     color: #fff !important;
     max-width: 80%;
+
+    ${respondTo.tabletMini`
+      max-width: 100%;
+    `}
+
     .desc {
       color: var(--primary);
     }
@@ -28,6 +37,9 @@ export const HeroStyled = styled.div`
       color: #fff !important;
       font-weight: bold;
       text-transform: capitalize;
+      ${respondTo.tabletMini`
+        font-size: 3.2rem;
+      `}
     }
 
     .btn-container {
