@@ -4,6 +4,7 @@ import respondTo from "../utils/respondTo";
 export const HeroStyled = styled.div`
   padding: 0 10%;
   height: calc(100vh);
+  overflow:hidden;
   
   position: relative;
   display: flex;
@@ -14,17 +15,20 @@ export const HeroStyled = styled.div`
   /* align-items: center;
   justify-content: space-between; */
 
+  max-width: 100vw;
   ${respondTo.tabletMini`
     padding: 0 4rem;
   `}
 
   .wrapper {
+    
     z-index: 10;
     color: #fff !important;
     max-width: 80%;
 
     ${respondTo.tabletMini`
       max-width: 100%;
+      max-width: 100vw;
     `}
 
     .desc {
@@ -63,6 +67,7 @@ export const HeroStyled = styled.div`
   .container {
     margin-top: 10rem;
     height: inherit;
+    max-width: 100vw;
 
     display: flex;
     align-items: center;
@@ -88,6 +93,7 @@ export const HeroStyled = styled.div`
 
   .opening-again {
     text-align: center;
+    max-width: 100vw;
     margin-top: 2rem;
     width: 30rem;
     position: relative;
@@ -100,8 +106,10 @@ export const HeroStyled = styled.div`
 
   .slideshow {
     position: static;
+    max-width: 100vw;
   }
   .left-panel {
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -111,6 +119,7 @@ export const HeroStyled = styled.div`
     `}
 
     h1 {
+      max-width: 100vw;
       line-height: 6.5rem;
       font-style: italic;
       font-weight: 500;
@@ -251,13 +260,15 @@ export const HeroStyled = styled.div`
 
 export const HomeStyled = styled.main`
   width: 100%;
-
+  max-width: 100vw;
+  overflow:hidden;
   
 
   a.text-underline {
     text-decoration: underline !important;
   }
   .main-desc {
+    max-width: 100vw;
     padding: 2rem;
     text-align: center;
     font-size: 2.4rem;
@@ -266,6 +277,7 @@ export const HomeStyled = styled.main`
     font-family: sans-serif;
   }
   .video {
+    max-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -285,6 +297,7 @@ export const HomeStyled = styled.main`
     }
     
     &__description {
+      max-width: 100vw;
       padding: 4rem 2rem;
       text-align: center;
 
@@ -317,6 +330,7 @@ export const HomeStyled = styled.main`
   }
 
   .testimonials {
+    max-width: 100vw;
     padding: 0 10%;
     display: flex;
     flex-direction: column;
@@ -324,6 +338,7 @@ export const HomeStyled = styled.main`
     align-items: center;
   }
   .comment-container {
+    max-width: 100vw;
     height: 20rem;
     padding: 2rem 0;
     max-width: 60rem;

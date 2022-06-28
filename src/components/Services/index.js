@@ -12,10 +12,13 @@ import { Link } from 'gatsby';
 
 const ServicesStyled = styled.div`
   grid-column: full-start / full-end;
+  max-width: 100vw;
+  overflow:hidden;
   h1 {
     text-align: center;
   }
   .hero {
+    max-width: 100vw;
     display: flex;
     ${respondTo.tabletMini` 
       flex-direction:column;
@@ -23,6 +26,7 @@ const ServicesStyled = styled.div`
   }
 
   .left-hero {
+    max-width: 100vw;
     padding: 5rem 5%;
 
     background: #fafafa;
@@ -40,6 +44,7 @@ const ServicesStyled = styled.div`
       width: 100%;
     `}
     h2 {
+      max-width: 100vw;
       padding-bottom: 2rem;
       font-size: 3.4rem;
       text-align: center;
@@ -66,6 +71,7 @@ const ServicesStyled = styled.div`
   }
 
   .right-hero {
+    max-width: 100vw;
     width: 50%;
     ${respondTo.tabletMini` 
       width: 100%;
@@ -99,6 +105,7 @@ const ServicesStyled = styled.div`
   }
 
   .carpet-price-calculator {
+    max-width: 100vw;
     margin: 3rem 0;
     padding: 0 5%;
     /* display: flex; */
@@ -135,6 +142,7 @@ const ServicesStyled = styled.div`
   }
 
   .germs {
+    max-width: 100vw;
     margin: 5rem 0;
     padding: 0 5%;
     display: flex;
@@ -164,6 +172,7 @@ const ServicesStyled = styled.div`
   }
 
   .services-desc {
+    max-width: 100vw;
     /* padding: 2rem; */
     p {
       &:first-of-type {
@@ -173,6 +182,7 @@ const ServicesStyled = styled.div`
   }
 
   .price-list {
+    max-width: 100vw;
     padding: 0 5%;
 
     /* ${respondTo.laptop` 
@@ -254,6 +264,7 @@ const ServicesStyled = styled.div`
   }
 
   .cleaning-process {
+    max-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -340,6 +351,7 @@ const ServicesStyled = styled.div`
   }
 
   .warning-message {
+    max-width: 100vw;
     grid-column: 1/3;
     font-style: italic;
     font-size: 2.4rem;
