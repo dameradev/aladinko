@@ -41,6 +41,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.image.publicURL}
       />
       <BlogPostStyled itemScope itemType="http://schema.org/Article">
         <header >
@@ -103,6 +104,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          publicURL
+        }
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {
