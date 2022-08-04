@@ -81,8 +81,11 @@ const HomePage = () => {
           <div className='wrapper '>
             {/* <p className='desc'>Pralnica Aladinko ponuja</p> */}
             <h1>Profesionalna storitev pranje preprog</h1>
+            <p className='vacation'>
+              Od 04.08 do 25.08 smo na dopust
+            </p>
             <p>
-            Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko preprečite pojav nekaterih alergij in zmanjšate prisotnost škodljivih bakterij, virusov v vaših domovih.
+              Z uporabo naših storitev dobite osvežitev v svojih domovih, lahko preprečite pojav nekaterih alergij in zmanjšate prisotnost škodljivih bakterij, virusov v vaših domovih.
             </p>
             <div className='btn-container'>
               <a className='btn' href="tel:+38664163381">POKLIČITE</a>
