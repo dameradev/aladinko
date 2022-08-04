@@ -20,6 +20,11 @@ export const HeroStyled = styled.div`
     padding: 0 4rem;
   `}
 
+  .vacation {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--secondary);
+  }
   .wrapper {
     
     z-index: 10;

@@ -21,6 +21,7 @@ module.exports = {
           `Open Sans`,
           `Josefin Sans\:100`,
           `Josefin Sans\:200`,
+          `Josefin Sans\:600`,
           // `montserrat`, `montserrat\:700`, `montserrat\:900`, `open sans`
           // `source Nunito\: 100, 200,300,400,400i,700`, // you can also specify font weights and styles
         ],
