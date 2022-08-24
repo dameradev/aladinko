@@ -21,9 +21,10 @@ export const HeroStyled = styled.div`
   `}
 
   .vacation {
+    line-height: 4rem;
     font-size: 3.2rem;
     font-weight: 600;
-    color: var(--secondary);
+    color: #fff;
   }
   .wrapper {
     
